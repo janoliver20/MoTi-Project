@@ -1,0 +1,608 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1FB020EF22778CFB009B4253 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB020EE22778CFB009B4253 /* AppDelegate.swift */; };
+		1FB020F122778CFB009B4253 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB020F022778CFB009B4253 /* ViewController.swift */; };
+		1FB020F422778CFC009B4253 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FB020F222778CFC009B4253 /* Main.storyboard */; };
+		1FB020F722778CFC009B4253 /* MoTi.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1FB020F522778CFC009B4253 /* MoTi.xcdatamodeld */; };
+		1FB020F922778CFD009B4253 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FB020F822778CFD009B4253 /* Assets.xcassets */; };
+		1FB020FC22778CFD009B4253 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FB020FA22778CFD009B4253 /* LaunchScreen.storyboard */; };
+		1FB0210722778CFD009B4253 /* MoTiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB0210622778CFD009B4253 /* MoTiTests.swift */; };
+		1FB0211222778CFD009B4253 /* MoTiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB0211122778CFD009B4253 /* MoTiUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1FB0210322778CFD009B4253 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1FB020E322778CFB009B4253 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1FB020EA22778CFB009B4253;
+			remoteInfo = MoTi;
+		};
+		1FB0210E22778CFD009B4253 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1FB020E322778CFB009B4253 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1FB020EA22778CFB009B4253;
+			remoteInfo = MoTi;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1FB020EB22778CFB009B4253 /* MoTi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoTi.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1FB020EE22778CFB009B4253 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1FB020F022778CFB009B4253 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1FB020F322778CFC009B4253 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1FB020F622778CFC009B4253 /* MoTi.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MoTi.xcdatamodel; sourceTree = "<group>"; };
+		1FB020F822778CFD009B4253 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1FB020FB22778CFD009B4253 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1FB020FD22778CFD009B4253 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1FB0210222778CFD009B4253 /* MoTiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoTiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1FB0210622778CFD009B4253 /* MoTiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoTiTests.swift; sourceTree = "<group>"; };
+		1FB0210822778CFD009B4253 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1FB0210D22778CFD009B4253 /* MoTiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoTiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1FB0211122778CFD009B4253 /* MoTiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoTiUITests.swift; sourceTree = "<group>"; };
+		1FB0211322778CFD009B4253 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1FB020E822778CFB009B4253 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1FB020FF22778CFD009B4253 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1FB0210A22778CFD009B4253 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1FB020E222778CFB009B4253 = {
+			isa = PBXGroup;
+			children = (
+				1FB020ED22778CFB009B4253 /* MoTi */,
+				1FB0210522778CFD009B4253 /* MoTiTests */,
+				1FB0211022778CFD009B4253 /* MoTiUITests */,
+				1FB020EC22778CFB009B4253 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1FB020EC22778CFB009B4253 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1FB020EB22778CFB009B4253 /* MoTi.app */,
+				1FB0210222778CFD009B4253 /* MoTiTests.xctest */,
+				1FB0210D22778CFD009B4253 /* MoTiUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1FB020ED22778CFB009B4253 /* MoTi */ = {
+			isa = PBXGroup;
+			children = (
+				1FB020EE22778CFB009B4253 /* AppDelegate.swift */,
+				1FB020F022778CFB009B4253 /* ViewController.swift */,
+				1FB020F222778CFC009B4253 /* Main.storyboard */,
+				1FB020F822778CFD009B4253 /* Assets.xcassets */,
+				1FB020FA22778CFD009B4253 /* LaunchScreen.storyboard */,
+				1FB020FD22778CFD009B4253 /* Info.plist */,
+				1FB020F522778CFC009B4253 /* MoTi.xcdatamodeld */,
+			);
+			path = MoTi;
+			sourceTree = "<group>";
+		};
+		1FB0210522778CFD009B4253 /* MoTiTests */ = {
+			isa = PBXGroup;
+			children = (
+				1FB0210622778CFD009B4253 /* MoTiTests.swift */,
+				1FB0210822778CFD009B4253 /* Info.plist */,
+			);
+			path = MoTiTests;
+			sourceTree = "<group>";
+		};
+		1FB0211022778CFD009B4253 /* MoTiUITests */ = {
+			isa = PBXGroup;
+			children = (
+				1FB0211122778CFD009B4253 /* MoTiUITests.swift */,
+				1FB0211322778CFD009B4253 /* Info.plist */,
+			);
+			path = MoTiUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1FB020EA22778CFB009B4253 /* MoTi */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1FB0211622778CFD009B4253 /* Build configuration list for PBXNativeTarget "MoTi" */;
+			buildPhases = (
+				1FB020E722778CFB009B4253 /* Sources */,
+				1FB020E822778CFB009B4253 /* Frameworks */,
+				1FB020E922778CFB009B4253 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MoTi;
+			productName = MoTi;
+			productReference = 1FB020EB22778CFB009B4253 /* MoTi.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1FB0210122778CFD009B4253 /* MoTiTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1FB0211922778CFD009B4253 /* Build configuration list for PBXNativeTarget "MoTiTests" */;
+			buildPhases = (
+				1FB020FE22778CFD009B4253 /* Sources */,
+				1FB020FF22778CFD009B4253 /* Frameworks */,
+				1FB0210022778CFD009B4253 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1FB0210422778CFD009B4253 /* PBXTargetDependency */,
+			);
+			name = MoTiTests;
+			productName = MoTiTests;
+			productReference = 1FB0210222778CFD009B4253 /* MoTiTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		1FB0210C22778CFD009B4253 /* MoTiUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1FB0211C22778CFD009B4253 /* Build configuration list for PBXNativeTarget "MoTiUITests" */;
+			buildPhases = (
+				1FB0210922778CFD009B4253 /* Sources */,
+				1FB0210A22778CFD009B4253 /* Frameworks */,
+				1FB0210B22778CFD009B4253 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1FB0210F22778CFD009B4253 /* PBXTargetDependency */,
+			);
+			name = MoTiUITests;
+			productName = MoTiUITests;
+			productReference = 1FB0210D22778CFD009B4253 /* MoTiUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1FB020E322778CFB009B4253 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = Cortiel_Lehner;
+				TargetAttributes = {
+					1FB020EA22778CFB009B4253 = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+					1FB0210122778CFD009B4253 = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = 1FB020EA22778CFB009B4253;
+					};
+					1FB0210C22778CFD009B4253 = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = 1FB020EA22778CFB009B4253;
+					};
+				};
+			};
+			buildConfigurationList = 1FB020E622778CFB009B4253 /* Build configuration list for PBXProject "MoTi" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1FB020E222778CFB009B4253;
+			productRefGroup = 1FB020EC22778CFB009B4253 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1FB020EA22778CFB009B4253 /* MoTi */,
+				1FB0210122778CFD009B4253 /* MoTiTests */,
+				1FB0210C22778CFD009B4253 /* MoTiUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1FB020E922778CFB009B4253 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1FB020FC22778CFD009B4253 /* LaunchScreen.storyboard in Resources */,
+				1FB020F922778CFD009B4253 /* Assets.xcassets in Resources */,
+				1FB020F422778CFC009B4253 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1FB0210022778CFD009B4253 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1FB0210B22778CFD009B4253 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1FB020E722778CFB009B4253 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1FB020F722778CFC009B4253 /* MoTi.xcdatamodeld in Sources */,
+				1FB020F122778CFB009B4253 /* ViewController.swift in Sources */,
+				1FB020EF22778CFB009B4253 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1FB020FE22778CFD009B4253 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1FB0210722778CFD009B4253 /* MoTiTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1FB0210922778CFD009B4253 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1FB0211222778CFD009B4253 /* MoTiUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1FB0210422778CFD009B4253 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1FB020EA22778CFB009B4253 /* MoTi */;
+			targetProxy = 1FB0210322778CFD009B4253 /* PBXContainerItemProxy */;
+		};
+		1FB0210F22778CFD009B4253 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1FB020EA22778CFB009B4253 /* MoTi */;
+			targetProxy = 1FB0210E22778CFD009B4253 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1FB020F222778CFC009B4253 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1FB020F322778CFC009B4253 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1FB020FA22778CFD009B4253 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1FB020FB22778CFD009B4253 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1FB0211422778CFD009B4253 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1FB0211522778CFD009B4253 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1FB0211722778CFD009B4253 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = AR3Z7JKR2H;
+				INFOPLIST_FILE = MoTi/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = at.fhhgb.mc.project.MoTi;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1FB0211822778CFD009B4253 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = AR3Z7JKR2H;
+				INFOPLIST_FILE = MoTi/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = at.fhhgb.mc.project.MoTi;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		1FB0211A22778CFD009B4253 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = AR3Z7JKR2H;
+				INFOPLIST_FILE = MoTiTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = at.fhhgb.mc.project.MoTiTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MoTi.app/MoTi";
+			};
+			name = Debug;
+		};
+		1FB0211B22778CFD009B4253 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = AR3Z7JKR2H;
+				INFOPLIST_FILE = MoTiTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = at.fhhgb.mc.project.MoTiTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MoTi.app/MoTi";
+			};
+			name = Release;
+		};
+		1FB0211D22778CFD009B4253 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = AR3Z7JKR2H;
+				INFOPLIST_FILE = MoTiUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = at.fhhgb.mc.project.MoTiUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MoTi;
+			};
+			name = Debug;
+		};
+		1FB0211E22778CFD009B4253 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = AR3Z7JKR2H;
+				INFOPLIST_FILE = MoTiUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = at.fhhgb.mc.project.MoTiUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MoTi;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1FB020E622778CFB009B4253 /* Build configuration list for PBXProject "MoTi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1FB0211422778CFD009B4253 /* Debug */,
+				1FB0211522778CFD009B4253 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1FB0211622778CFD009B4253 /* Build configuration list for PBXNativeTarget "MoTi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1FB0211722778CFD009B4253 /* Debug */,
+				1FB0211822778CFD009B4253 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1FB0211922778CFD009B4253 /* Build configuration list for PBXNativeTarget "MoTiTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1FB0211A22778CFD009B4253 /* Debug */,
+				1FB0211B22778CFD009B4253 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1FB0211C22778CFD009B4253 /* Build configuration list for PBXNativeTarget "MoTiUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1FB0211D22778CFD009B4253 /* Debug */,
+				1FB0211E22778CFD009B4253 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		1FB020F522778CFC009B4253 /* MoTi.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				1FB020F622778CFC009B4253 /* MoTi.xcdatamodel */,
+			);
+			currentVersion = 1FB020F622778CFC009B4253 /* MoTi.xcdatamodel */;
+			path = MoTi.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 1FB020E322778CFB009B4253 /* Project object */;
+}
