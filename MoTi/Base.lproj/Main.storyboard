@@ -27,8 +27,8 @@
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="hap-97-QZY">
                                 <rect key="frame" x="148" y="237" width="246" height="29"/>
                                 <segments>
-                                    <segment title="Seen"/>
                                     <segment title="Unseen"/>
+                                    <segment title="Seen"/>
                                 </segments>
                             </segmentedControl>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Lel-5c-cuV">
@@ -113,6 +113,7 @@
                         <outlet property="movieImage" destination="Lel-5c-cuV" id="ALd-uh-dYo"/>
                         <outlet property="movieTitle" destination="sJX-Z6-eMa" id="U9d-fS-bpe"/>
                         <outlet property="tableView" destination="GNR-Nc-JJ7" id="wsb-QH-bVr"/>
+                        <outlet property="watchedSegmentControl" destination="hap-97-QZY" id="CrR-bK-INf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6sK-5v-Ha7" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -196,7 +197,7 @@
         <!--Unseen-->
         <scene sceneID="blM-pp-VpQ">
             <objects>
-                <viewController id="JvU-QA-xR2" customClass="UnseenCollectionViewController" customModule="MoTi" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="JvU-QA-xR2" customClass="MovieViewController" customModule="MoTi" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lQG-Dw-gY3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -233,6 +234,9 @@
                         <viewLayoutGuide key="safeArea" id="JSP-cr-sJ0"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Unseen" id="fNj-bc-wpl"/>
+                    <connections>
+                        <outlet property="tableView" destination="IV6-89-OBd" id="QtP-qe-bM0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7KS-hb-sep" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

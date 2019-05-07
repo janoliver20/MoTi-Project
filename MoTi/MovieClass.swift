@@ -7,20 +7,17 @@
 //
 
 import UIKit
-import Contacts
 
 class MovieClass {
     let movieTitle: String
-    let description: String
+    let desc: String
     let date: Date
     let hasBeenWatched: Bool
-    var friends: [CNMutableContact]
     
-    init(title movieTitle: String, description: String = "", date: Date, hasBeenWatched: Bool = false, friends: [CNMutableContact]) {
+    init(title movieTitle: String, description: String = "", date: Date, hasBeenWatched: Bool = false) {
         self.movieTitle = movieTitle
-        self.description = description
+        self.desc = description
         self.date = date
         self.hasBeenWatched = hasBeenWatched
-        self.friends = friends
     }
 }

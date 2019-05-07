@@ -7,10 +7,18 @@
 //
 
 import UIKit
+import CoreData
 
 var settingsArray = ["Date", "Friends", "Description"]
 
 var myIndex = 0
+
+struct PropertyKey {
+    static let title = "title"
+    static let desc = "movieDescription"
+    static let date = "date"
+    static let hasBeenWatched = "hasBeenWatched"
+}
 
 class NewMovieViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate, UITableViewDataSource{
     
@@ -18,7 +26,9 @@ class NewMovieViewController: UIViewController, UITextFieldDelegate, UITableView
     @IBOutlet weak var movieImage: UIImageView!
     @IBOutlet weak var tableView: UITableView!
     
-   
+    @IBOutlet weak var watchedSegmentControl: UISegmentedControl!
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,6 +49,8 @@ class NewMovieViewController: UIViewController, UITextFieldDelegate, UITableView
     }
     
     @IBAction func saveNewMovie(_ sender: UIBarButtonItem) {
+        
+        
         dismiss(animated: true, completion: nil)
     }
     
@@ -62,6 +74,32 @@ class NewMovieViewController: UIViewController, UITextFieldDelegate, UITableView
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         myIndex = indexPath.row
+        
+    }
+    
+    func save(title: String, description: String, date: Date, hasBeenWatched: Bool){
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            return
+        }
+        
+        let managedContext = appDelegate.persistentContainer.viewContext
+        
+        let entity = NSEntityDescription.entity(forEntityName: "Movie", in: managedContext)!
+        
+        
+        let movie = NSManagedObject(entity: entity, insertInto: managedContext)
+        
+        movie.setValue(title, forKey: PropertyKey.title)
+        movie.setValue(description, forKey: PropertyKey.desc)
+        movie.setValue(date, forKey: PropertyKey.date)
+        movie.setValue(hasBeenWatched, forKey: PropertyKey.hasBeenWatched)
+        
+        do {
+            try managedContext.save()
+        } catch let error as NSError {
+            print("Could not save. \(error), \(error.userInfo)")
+        }
+        
         
     }
 
