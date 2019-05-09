@@ -9,14 +9,24 @@
 import UIKit
 import CoreData
 
-class MovieViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+class MovieViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
     
     var movies: [Movie] = []
+    @IBOutlet weak var movieTableView: UITableView!
     
-    @IBOutlet weak var tableView: UICollectionView!
+    let emptyTextBox: UITextView = {
+        let textView = UITextView()
+        textView.text = "No movies yet!"
+        textView.textAlignment = .center
+        
+        textView.translatesAutoresizingMaskIntoConstraints = false
+        return textView
+    }()
+    
+    
     private let reuseIdentifier = "unseenCell"
     
-    private let sectionInsets = UIEdgeInsets(top: 50.0, left: 20.0, bottom: 50.0, right: 20.0)
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -42,17 +52,32 @@ class MovieViewController: UIViewController, UICollectionViewDelegate, UICollect
         
     }
     
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return movies.count
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
     }
     
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return movies.count
-    }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        <#code#>
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return movies.count != 0 ? movies.count : 1
     }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "unseenCell", for: indexPath)
+        if movies.count == 0 {
+            movieTableView.isHidden = true
+            view.addSubview(emptyTextBox)
+            emptyTextBox.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+            emptyTextBox.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        }
+        else {
+            
+        }
+        
+        
+        return cell
+    }
+
+   
     
 
     

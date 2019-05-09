@@ -1,15 +1,16 @@
 //
-//  SettingTableViewCell.swift
+//  seenMovieTableViewCell.swift
 //  MoTi
 //
-//  Created by Jan Cortiel on 04.05.19.
+//  Created by Jan Cortiel on 09.05.19.
 //  Copyright © 2019 Cortiel_Lehner. All rights reserved.
 //
 
 import UIKit
 
-class SettingTableViewCell: UITableViewCell {
-   
+class seenMovieTableViewCell: UITableViewCell {
+    @IBOutlet weak var movieCover: UIImageView!
+    @IBOutlet weak var movieDate: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
