@@ -9,8 +9,6 @@
 import UIKit
 
 class seenMovieTableViewCell: UITableViewCell {
-    @IBOutlet weak var movieCover: UIImageView!
-    @IBOutlet weak var movieDate: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

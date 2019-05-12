@@ -8,29 +8,47 @@
 
 import UIKit
 import CoreData
+extension Notification.Name {
+    static let refreshTable = Notification.Name("refreshTable")
+}
 
 class MovieViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    let cellID = "movieCell"
     
-    var movies: [Movie] = []
-    @IBOutlet weak var movieTableView: UITableView!
+    var movies : [Movie] = [Movie]()
     
-    let emptyTextBox: UITextView = {
-        let textView = UITextView()
-        textView.text = "No movies yet!"
-        textView.textAlignment = .center
-        
-        textView.translatesAutoresizingMaskIntoConstraints = false
-        return textView
-    }()
-    
-    
-    private let reuseIdentifier = "unseenCell"
-    
-    
+    @IBOutlet weak var movieTV: UITableView!
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        loadMovies()
+        
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        NotificationCenter.default.addObserver(self, selector: #selector(MovieViewController.reload), name: .refreshTable, object: nil)
+//        loadMovies()
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return movies.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath)
+        let currentLastItem = movies[indexPath.row]
+        cell.textLabel?.text = currentLastItem.title
+        return cell
+    }
+    
+    @objc func reload() {
+        loadMovies()
+        movieTV.reloadData()
+    }
+    
+    func loadMovies(){
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
             return
         }
@@ -41,41 +59,15 @@ class MovieViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
         do {
             movies = try managedContext.fetch(fetchRequest) as! [Movie]
-        } catch let error as NSError {
-            print("Could not fetch. \(error), \(error.userInfo)")
         }
-        
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-    }
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-    
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return movies.count != 0 ? movies.count : 1
-    }
-
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "unseenCell", for: indexPath)
-        if movies.count == 0 {
-            movieTableView.isHidden = true
-            view.addSubview(emptyTextBox)
-            emptyTextBox.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-            emptyTextBox.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        catch let error as NSError {
+            print("Could not fetch Data! \(error), \(error.userInfo)")
         }
-        else {
-            
-        }
-        
-        
-        return cell
     }
+    
+    
+    
+   
 
    
     

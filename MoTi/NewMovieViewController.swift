@@ -27,7 +27,8 @@ class NewMovieViewController: UIViewController, UITextFieldDelegate, UITableView
     @IBOutlet weak var tableView: UITableView!
     
     @IBOutlet weak var watchedSegmentControl: UISegmentedControl!
-    
+
+    var hasBeenWatched = false
     
     
     override func viewDidLoad() {
@@ -49,7 +50,24 @@ class NewMovieViewController: UIViewController, UITextFieldDelegate, UITableView
     }
     
     @IBAction func saveNewMovie(_ sender: UIBarButtonItem) {
+        guard let movieTitle = movieTitle.text else {
+            let alert = UIAlertController(title: "No movie title entered!", message: "You need to enter a title!", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+            self.present(alert, animated: true)
+            return
+        }
+        switch watchedSegmentControl.selectedSegmentIndex {
+        case 0:
+            hasBeenWatched = false
+        case 1:
+            hasBeenWatched = true
+        default:
+            break
+        }
         
+        save(title: movieTitle, description: "", date: Date(), hasBeenWatched: hasBeenWatched)
+        
+        NotificationCenter.default.post(name: .refreshTable, object: nil)
         
         dismiss(animated: true, completion: nil)
     }

@@ -115,9 +115,9 @@ class SettingsViewController: UIViewController, UITextViewDelegate, UINavigation
         return false
     }
     
-    func textViewDidChange(_ textView: UITextView) {
-        
-    }
+//    func textViewDidChange(_ textView: UITextView) {
+//        
+//    }
     
     
 
