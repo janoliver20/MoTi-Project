@@ -12,67 +12,52 @@ extension Notification.Name {
     static let refreshTable = Notification.Name("refreshTable")
 }
 
-class MovieViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    
+class MovieViewController: UIViewController  {
     let cellID = "movieCell"
-    
-    var movies : [Movie] = [Movie]()
-    
+    let allMovies = MovieClass.allMovies
+
     @IBOutlet weak var movieTV: UITableView!
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        loadMovies()
-        
+        refreshMovieLibrary()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         NotificationCenter.default.addObserver(self, selector: #selector(MovieViewController.reload), name: .refreshTable, object: nil)
-//        loadMovies()
+        movieTV.register(MovieTableViewCell.self, forCellReuseIdentifier: cellID)
     }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return movies.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath)
-        let currentLastItem = movies[indexPath.row]
-        cell.textLabel?.text = currentLastItem.title
-        return cell
-    }
-    
+
     @objc func reload() {
-        loadMovies()
+        refreshMovieLibrary()
         movieTV.reloadData()
     }
     
-    func loadMovies(){
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+    private func refreshMovieLibrary(){
+        if !allMovies.refreshMovies(){
+            let alert = UIAlertController(title: "Movie could not load!", message: "Please restart the app again!", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+            self.present(alert, animated: true)
             return
         }
-        
-        let managedContext = appDelegate.persistentContainer.viewContext
-        
-        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Movie")
-        
-        do {
-            movies = try managedContext.fetch(fetchRequest) as! [Movie]
-        }
-        catch let error as NSError {
-            print("Could not fetch Data! \(error), \(error.userInfo)")
-        }
+    }
+}
+
+extension MovieViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return allMovies.getMovieCount()
     }
     
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = movieTV.dequeueReusableCell(withIdentifier: cellID, for: indexPath) as! MovieTableViewCell
+        let currentLastItem = allMovies.getMovie(withIndex: indexPath.row)
+        if currentLastItem.wasFound {
+            cell.movie = currentLastItem.movie
+        }
+        return cell
+    }
     
-    
-   
-
-   
-    
-
-    
-    
-
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
+    }
 }

@@ -49,15 +49,15 @@
                                 <rect key="frame" x="0.0" y="273" width="414" height="589"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="settingsCell" textLabel="a1F-bj-ie2" style="IBUITableViewCellStyleDefault" id="E1K-2w-9wi">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="settingsCell" textLabel="a1F-bj-ie2" style="IBUITableViewCellStyleDefault" id="E1K-2w-9wi">
                                         <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="E1K-2w-9wi" id="yJH-Gh-Ys2">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="376" height="43.666666666666664"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="a1F-bj-ie2">
-                                                    <rect key="frame" x="20" y="0.0" width="374" height="43.666666666666664"/>
+                                                    <rect key="frame" x="20" y="0.0" width="356" height="43.666666666666664"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -193,7 +193,7 @@
             </objects>
             <point key="canvasLocation" x="-1017" y="-232"/>
         </scene>
-        <!--Unseen-->
+        <!--Seen-->
         <scene sceneID="blM-pp-VpQ">
             <objects>
                 <viewController id="JvU-QA-xR2" customClass="MovieViewController" customModule="MoTi" customModuleProvider="target" sceneMemberID="viewController">
@@ -205,21 +205,12 @@
                                 <rect key="frame" x="0.0" y="140" width="414" height="673"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="movieCell" textLabel="5PC-Dy-m5C" style="IBUITableViewCellStyleDefault" id="X5L-8W-kuJ">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="movieCell" id="X5L-8W-kuJ">
                                         <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="X5L-8W-kuJ" id="380-MW-fgL">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="376" height="43.666666666666664"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="5PC-Dy-m5C">
-                                                    <rect key="frame" x="20" y="0.0" width="374" height="43.666666666666664"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
@@ -238,7 +229,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="JSP-cr-sJ0"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Unseen" id="fNj-bc-wpl"/>
+                    <tabBarItem key="tabBarItem" title="Seen" id="fNj-bc-wpl"/>
                     <connections>
                         <outlet property="movieTV" destination="gq5-vW-4DY" id="Ld6-c4-1KG"/>
                     </connections>
@@ -247,7 +238,7 @@
             </objects>
             <point key="canvasLocation" x="-94.20289855072464" y="-577.23214285714278"/>
         </scene>
-        <!--Seen-->
+        <!--Unseen-->
         <scene sceneID="APr-fW-Tgx">
             <objects>
                 <viewController id="w3i-nt-YOJ" customClass="SeenCollectionViewController" customModule="MoTi" customModuleProvider="target" sceneMemberID="viewController">
@@ -286,7 +277,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="D1V-5W-C6R"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Seen" id="Dhb-Q1-hr5"/>
+                    <tabBarItem key="tabBarItem" title="Unseen" id="Dhb-Q1-hr5"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cXs-Cl-nLr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

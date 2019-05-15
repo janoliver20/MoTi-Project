@@ -51,6 +51,9 @@ class NewMovieViewController: UIViewController, UITextFieldDelegate, UITableView
     
     @IBAction func saveNewMovie(_ sender: UIBarButtonItem) {
         guard let movieTitle = movieTitle.text else {
+            return
+        }
+        if movieTitle.isEmpty {
             let alert = UIAlertController(title: "No movie title entered!", message: "You need to enter a title!", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
             self.present(alert, animated: true)
@@ -65,7 +68,13 @@ class NewMovieViewController: UIViewController, UITextFieldDelegate, UITableView
             break
         }
         
-        save(title: movieTitle, description: "", date: Date(), hasBeenWatched: hasBeenWatched)
+        
+        if !MovieClass.allMovies.saveNewMovie(title: movieTitle, description: "", date: Date(), hasBeenWatched: hasBeenWatched){
+            let alert = UIAlertController(title: "Movie was not saved!", message: "Please try again!", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+            self.present(alert, animated: true)
+            return
+        }
         
         NotificationCenter.default.post(name: .refreshTable, object: nil)
         
@@ -92,32 +101,6 @@ class NewMovieViewController: UIViewController, UITextFieldDelegate, UITableView
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         myIndex = indexPath.row
-        
-    }
-    
-    func save(title: String, description: String, date: Date, hasBeenWatched: Bool){
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
-            return
-        }
-        
-        let managedContext = appDelegate.persistentContainer.viewContext
-        
-        let entity = NSEntityDescription.entity(forEntityName: "Movie", in: managedContext)!
-        
-        
-        let movie = NSManagedObject(entity: entity, insertInto: managedContext)
-        
-        movie.setValue(title, forKey: PropertyKey.title)
-        movie.setValue(description, forKey: PropertyKey.desc)
-        movie.setValue(date, forKey: PropertyKey.date)
-        movie.setValue(hasBeenWatched, forKey: PropertyKey.hasBeenWatched)
-        
-        do {
-            try managedContext.save()
-        } catch let error as NSError {
-            print("Could not save. \(error), \(error.userInfo)")
-        }
-        
         
     }
 
