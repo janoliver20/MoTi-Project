@@ -11,9 +11,8 @@ import UIKit
 
 
 class SettingsViewController: UIViewController, UITextViewDelegate, UINavigationControllerDelegate {
-    
+        
     @IBOutlet weak var viewLbl: UINavigationItem!
-    
     
     let movieDatePicker: UIDatePicker = {
         let datePicker = UIDatePicker()
@@ -113,6 +112,9 @@ class SettingsViewController: UIViewController, UITextViewDelegate, UINavigation
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         descTextView.resignFirstResponder()
         return false
+    }
+    @IBAction func finishEditing(_ sender: UIBarButtonItem) {
+        dismiss(animated: true)
     }
     
 //    func textViewDidChange(_ textView: UITextView) {

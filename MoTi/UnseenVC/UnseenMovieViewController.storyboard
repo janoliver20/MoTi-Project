@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mDN-51-J6Z">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Unseen Movie View Controller-->
+        <scene sceneID="ccx-H2-Ymh">
+            <objects>
+                <viewController storyboardIdentifier="UnseenMovieViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="CVD-Rd-TN6" customClass="UnseenMovieViewController" customModule="MoTi" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="T9t-51-DRL">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1nb-VI-YX9">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="movieUnseenCell" id="XzQ-4L-44d" customClass="UnseenMovieTableViewCell" customModule="MoTi" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XzQ-4L-44d" id="7DW-Et-St0">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="CVD-Rd-TN6" id="QvH-Xy-UTO"/>
+                                    <outlet property="delegate" destination="CVD-Rd-TN6" id="yTe-Ie-fhd"/>
+                                    <outlet property="prefetchDataSource" destination="CVD-Rd-TN6" id="zY3-RU-OtY"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="1nb-VI-YX9" firstAttribute="top" secondItem="L0g-D2-cof" secondAttribute="top" id="GUj-vF-LzD"/>
+                            <constraint firstItem="1nb-VI-YX9" firstAttribute="bottom" secondItem="L0g-D2-cof" secondAttribute="bottom" id="Mro-5k-5lA"/>
+                            <constraint firstItem="1nb-VI-YX9" firstAttribute="leading" secondItem="L0g-D2-cof" secondAttribute="leading" id="O79-7T-YIe"/>
+                            <constraint firstItem="1nb-VI-YX9" firstAttribute="trailing" secondItem="L0g-D2-cof" secondAttribute="trailing" id="TtH-6u-asC"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="L0g-D2-cof"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="BbM-s8-HIC">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="QNP-bz-oJv">
+                            <connections>
+                                <segue destination="xdQ-e0-SIV" kind="presentation" id="hTx-nJ-eJL"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="movieTV" destination="1nb-VI-YX9" id="toX-Ge-fvN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Plt-zD-CAQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1092.753623188406" y="110.49107142857143"/>
+        </scene>
+        <!--Unseen-->
+        <scene sceneID="uxm-kW-VPH">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mDN-51-J6Z" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Unseen" id="3DQ-cl-dxt"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Pfe-B8-ZwX">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="CVD-Rd-TN6" kind="relationship" relationship="rootViewController" id="upL-4I-PbZ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="czj-7r-DjG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="182.60869565217394" y="110.49107142857143"/>
+        </scene>
+        <!--NewMovieViewController-->
+        <scene sceneID="uGt-dZ-UWv">
+            <objects>
+                <viewControllerPlaceholder storyboardName="NewMovieViewController" id="xdQ-e0-SIV" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hkp-ib-KbF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1878" y="83"/>
+        </scene>
+    </scenes>
+</document>
