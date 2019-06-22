@@ -10,7 +10,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MoTi/AppDelegate.swift"
-            timestampString = "579990545.325503"
+            timestampString = "580050897.049237"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "13"
@@ -95,6 +95,146 @@
             endingLineNumber = "29"
             landmarkName = "NewMovieViewController"
             landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MoTi/New Movie/SettingsViewController.swift"
+            timestampString = "582820454.5468"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "SettingsViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MoTi.SettingsViewController.vcTitle.getter : Swift.Optional&lt;Swift.String&gt;"
+                  moduleName = "MoTi"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jancortiel/Documents/FH/Semester%202/Projekt/MoTi/MoTi/New%20Movie/SettingsViewController.swift"
+                  timestampString = "579994357.366925"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "119">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MoTi.SettingsViewController.vcTitle.setter : Swift.Optional&lt;Swift.String&gt;"
+                  moduleName = "MoTi"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jancortiel/Documents/FH/Semester%202/Projekt/MoTi/MoTi/New%20Movie/SettingsViewController.swift"
+                  timestampString = "579994357.3689359"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "147">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MoTi.SettingsViewController.vcTitle.modify : Swift.Optional&lt;Swift.String&gt;"
+                  moduleName = "MoTi"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jancortiel/Documents/FH/Semester%202/Projekt/MoTi/MoTi/New%20Movie/SettingsViewController.swift"
+                  timestampString = "579994357.370928"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "18">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MoTi.SettingsViewController.vcTitle.modify : Swift.Optional&lt;Swift.String&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "MoTi"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jancortiel/Documents/FH/Semester%202/Projekt/MoTi/MoTi/New%20Movie/SettingsViewController.swift"
+                  timestampString = "579994357.3732049"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MoTi.SettingsViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; MoTi.SettingsViewController"
+                  moduleName = "MoTi"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jancortiel/Documents/FH/Semester%202/Projekt/MoTi/MoTi/New%20Movie/SettingsViewController.swift"
+                  timestampString = "579994357.375284"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "199">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MoTi.SettingsViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;MoTi.SettingsViewController&gt;"
+                  moduleName = "MoTi"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jancortiel/Documents/FH/Semester%202/Projekt/MoTi/MoTi/New%20Movie/SettingsViewController.swift"
+                  timestampString = "579994357.378309"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "107">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MoTi/New Movie/SettingsViewController.swift"
+            timestampString = "582820454.54712"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "61"
+            endingLineNumber = "61"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MoTi/New Movie/NewMovieViewController.swift"
+            timestampString = "582820454.54719"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "123"
+            endingLineNumber = "123"
+            landmarkName = "saveNewMovie(_:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

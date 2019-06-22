@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Unseen Movie View Controller-->
+        <!--MoTi-->
         <scene sceneID="ccx-H2-Ymh">
             <objects>
                 <viewController storyboardIdentifier="UnseenMovieViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="CVD-Rd-TN6" customClass="UnseenMovieViewController" customModule="MoTi" customModuleProvider="target" sceneMemberID="viewController">
@@ -47,7 +47,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="L0g-D2-cof"/>
                     </view>
-                    <navigationItem key="navigationItem" id="BbM-s8-HIC">
+                    <navigationItem key="navigationItem" title="MoTi" id="BbM-s8-HIC">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="QNP-bz-oJv">
                             <connections>
                                 <segue destination="xdQ-e0-SIV" kind="presentation" id="hTx-nJ-eJL"/>

@@ -8,10 +8,18 @@
 
 import UIKit
 
+protocol SettingsSaving {
+    func saveDate(date: Date)
+    func saveDescription(desc: String?)
+}
 
 
 class SettingsViewController: UIViewController, UITextViewDelegate, UINavigationControllerDelegate {
-        
+    
+    var vcTitle: String?
+    var delegate: SettingsSaving?
+    var descText: String?
+    
     @IBOutlet weak var viewLbl: UINavigationItem!
     
     let movieDatePicker: UIDatePicker = {
@@ -52,10 +60,20 @@ class SettingsViewController: UIViewController, UITextViewDelegate, UINavigation
         
         navigationController?.delegate = self
         
-        viewLbl.title = settingsArray[myIndex]
+        if let movieTitle = vcTitle {
+            viewLbl.title = movieTitle
+        }
         descTextView.delegate = self
         
         prepareLayout()
+        if let descText = descText {
+            descTextView.text = descText
+        }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
     }
     
     private func prepareLayout(){
@@ -66,14 +84,19 @@ class SettingsViewController: UIViewController, UITextViewDelegate, UINavigation
         headTextView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: 0).isActive = true
         headTextView.heightAnchor.constraint(equalToConstant: 50).isActive = true
         
-        if(settingsArray[myIndex].elementsEqual("Date")){
-            headTextView.text = "Set the date:"
-            prepareDateLayout()
+        if let movieTitle = vcTitle {
+            if(movieTitle.elementsEqual("Date")){
+                headTextView.text = "Set the date:"
+                prepareDateLayout()
+            }
+            else if(movieTitle.elementsEqual("Description")){
+                headTextView.text = "Description of the movie:"
+                descTextView.becomeFirstResponder()
+                prepareDescLayout()
+            }
         }
-        else if(settingsArray[myIndex].elementsEqual("Description")){
-            headTextView.text = "Description of the movie:"
-            descTextView.becomeFirstResponder()
-            prepareDescLayout()
+        else {
+            return
         }
         
     }
@@ -93,11 +116,12 @@ class SettingsViewController: UIViewController, UITextViewDelegate, UINavigation
         descTextView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 8).isActive = true
         descTextView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -8).isActive = true
         descTextView.bottomAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        
     }
     
     func textViewDidBeginEditing(_ textView: UITextView) {
         if textView.textColor == UIColor.lightGray {
-            textView.text = nil
+            textView.text = descText == nil ? nil : descText
             textView.textColor = UIColor.black
         }
     }
@@ -114,13 +138,17 @@ class SettingsViewController: UIViewController, UITextViewDelegate, UINavigation
         return false
     }
     @IBAction func finishEditing(_ sender: UIBarButtonItem) {
+        
+        if let vcTitle = vcTitle {
+            if vcTitle.elementsEqual("Date") {
+                delegate?.saveDate(date: movieDatePicker.date)
+            }
+            if vcTitle.elementsEqual("Description") {
+                delegate?.saveDescription(desc: descTextView.text.isEmpty ? nil : descTextView.text)
+            }
+        }
         dismiss(animated: true)
     }
-    
-//    func textViewDidChange(_ textView: UITextView) {
-//        
-//    }
-    
     
 
 }
