@@ -56,7 +56,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="movieTV" destination="1nb-VI-YX9" id="toX-Ge-fvN"/>
-                        <segue destination="96Z-mj-3Bu" kind="showDetail" id="rbn-7H-6WR"/>
+                        <segue destination="96Z-mj-3Bu" kind="showDetail" identifier="detailsSegueUnseen" id="rbn-7H-6WR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Plt-zD-CAQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
