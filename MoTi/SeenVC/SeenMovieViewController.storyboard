@@ -56,6 +56,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="movieTV" destination="8UC-aA-WPJ" id="dJ0-ZL-fRu"/>
+                        <segue destination="tIB-ap-7Ha" kind="showDetail" id="D7l-Ei-hy7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a2w-30-Soz" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -89,6 +90,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LUe-YK-UwV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1815" y="113"/>
+        </scene>
+        <!--DetailsViewController-->
+        <scene sceneID="NFv-yv-70J">
+            <objects>
+                <viewControllerPlaceholder storyboardName="DetailsViewController" id="tIB-ap-7Ha" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ybS-4t-Pw6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1815" y="164"/>
         </scene>
     </scenes>
 </document>

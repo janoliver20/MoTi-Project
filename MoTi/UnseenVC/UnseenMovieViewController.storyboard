@@ -56,11 +56,20 @@
                     </navigationItem>
                     <connections>
                         <outlet property="movieTV" destination="1nb-VI-YX9" id="toX-Ge-fvN"/>
+                        <segue destination="96Z-mj-3Bu" kind="showDetail" id="rbn-7H-6WR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Plt-zD-CAQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1092.753623188406" y="110.49107142857143"/>
+        </scene>
+        <!--DetailsViewController-->
+        <scene sceneID="dRh-M1-68p">
+            <objects>
+                <viewControllerPlaceholder storyboardName="DetailsViewController" id="96Z-mj-3Bu" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="047-BJ-sjA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1878" y="137"/>
         </scene>
         <!--Unseen-->
         <scene sceneID="uxm-kW-VPH">

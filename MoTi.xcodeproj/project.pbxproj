@@ -26,6 +26,8 @@
 		1FB020FC22778CFD009B4253 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FB020FA22778CFD009B4253 /* LaunchScreen.storyboard */; };
 		1FB0210722778CFD009B4253 /* MoTiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB0210622778CFD009B4253 /* MoTiTests.swift */; };
 		1FB0211222778CFD009B4253 /* MoTiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB0211122778CFD009B4253 /* MoTiUITests.swift */; };
+		74D7908722C0F43100180C63 /* DetailsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74D7908622C0F43100180C63 /* DetailsViewController.storyboard */; };
+		74D7908922C0F55C00180C63 /* MovieDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D7908822C0F55C00180C63 /* MovieDetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +73,8 @@
 		1FB0210D22778CFD009B4253 /* MoTiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoTiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FB0211122778CFD009B4253 /* MoTiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoTiUITests.swift; sourceTree = "<group>"; };
 		1FB0211322778CFD009B4253 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		74D7908622C0F43100180C63 /* DetailsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailsViewController.storyboard; sourceTree = "<group>"; };
+		74D7908822C0F55C00180C63 /* MovieDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +164,7 @@
 		1FB020ED22778CFB009B4253 /* MoTi */ = {
 			isa = PBXGroup;
 			children = (
+				74D7908522C0F3EC00180C63 /* DetailsViewController */,
 				1F33B9DC22946E1B00179163 /* Extensions */,
 				1F25C4862291E12A001EF2F9 /* SeenVC */,
 				1F25C4932291E75F001EF2F9 /* UnseenVC */,
@@ -191,6 +196,15 @@
 				1FB0211322778CFD009B4253 /* Info.plist */,
 			);
 			path = MoTiUITests;
+			sourceTree = "<group>";
+		};
+		74D7908522C0F3EC00180C63 /* DetailsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				74D7908622C0F43100180C63 /* DetailsViewController.storyboard */,
+				74D7908822C0F55C00180C63 /* MovieDetailsViewController.swift */,
+			);
+			path = DetailsViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -303,6 +317,7 @@
 				1F25C49C2291E93C001EF2F9 /* NewMovieViewController.storyboard in Resources */,
 				1F25C48E2291E41E001EF2F9 /* SeenMovieViewController.storyboard in Resources */,
 				1F25C4952291E777001EF2F9 /* UnseenMovieViewController.storyboard in Resources */,
+				74D7908722C0F43100180C63 /* DetailsViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -335,6 +350,7 @@
 				1F25C48C2291E3AE001EF2F9 /* SeenMovieTableViewCell.swift in Sources */,
 				1F20627022887CB80049F1D4 /* UIViewExtension.swift in Sources */,
 				1FB020EF22778CFB009B4253 /* AppDelegate.swift in Sources */,
+				74D7908922C0F55C00180C63 /* MovieDetailsViewController.swift in Sources */,
 				1F33B9DE22946E3000179163 /* UIColorExtension.swift in Sources */,
 				1F25C4992291E7E1001EF2F9 /* UnseenMovieTableViewCell.swift in Sources */,
 				1F2D7215227F03030002E74C /* SettingsViewController.swift in Sources */,
