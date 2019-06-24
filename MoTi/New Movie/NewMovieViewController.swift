@@ -122,7 +122,7 @@ class NewMovieViewController: UIViewController, UITextFieldDelegate, SettingsSav
             break
         }
 
-        if !MovieClass.allMovies.saveNewMovie(title: movieTitle, description: "", date: Date(), hasBeenWatched: hasBeenWatched) {
+        if !MovieClass.allMovies.saveNewMovie(title: movieTitle, description: descriptionText ?? "", date: dateToWatch ?? Date(), hasBeenWatched: hasBeenWatched) {
             let alert = UIAlertController(title: "Movie was not saved!", message: "Please try again!", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
             present(alert, animated: true)
