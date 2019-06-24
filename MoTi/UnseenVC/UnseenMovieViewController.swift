@@ -13,8 +13,10 @@ class UnseenMovieViewController: UIViewController  {
     
     let cellID = "movieUnseenCell"
     let allMovies = MovieClass.allMovies
+    let segueName = "detailsSegueUnseen"
     
     var unseenMovieArr: [Movie] = [Movie]()
+    var selectedMovie: Movie?
     
     @IBOutlet weak var movieTV: UITableView!
     
@@ -68,6 +70,19 @@ extension UnseenMovieViewController: UITableViewDelegate, UITableViewDataSource 
             allMovies.deleteMovie(movieObject: movieToDelete)
             self.unseenMovieArr.remove(at: indexPath.row)
             self.movieTV.deleteRows(at: [indexPath], with: .automatic)
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedMovie = unseenMovieArr[indexPath.row]
+        performSegue(withIdentifier: segueName, sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == segueName {
+            let vc = segue.destination as! UINavigationController
+            let realVC = vc.topViewController as! MovieDetailsViewController
+            realVC.myMovie = selectedMovie
         }
     }
 }

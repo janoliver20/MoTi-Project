@@ -15,8 +15,10 @@ extension Notification.Name {
 class SeenMovieViewController: UIViewController  {
     let cellID = "movieSeenCell"
     let allMovies = MovieClass.allMovies
+    let segueName = "detailsSegueSeen"
     
     var seenMovieArr: [Movie] = [Movie]()
+    var selectedMovie: Movie?
     
     @IBOutlet weak var movieTV: UITableView!
     
@@ -74,6 +76,19 @@ extension SeenMovieViewController: UITableViewDelegate, UITableViewDataSource {
             self.seenMovieArr.remove(at: indexPath.row)
             self.movieTV.deleteRows(at: [indexPath], with: .automatic)
             
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedMovie = seenMovieArr[indexPath.row]
+        performSegue(withIdentifier: segueName, sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == segueName {
+            let vc = segue.destination as! UINavigationController
+            let realVC = vc.topViewController as! MovieDetailsViewController
+            realVC.myMovie = selectedMovie
         }
     }
 }
