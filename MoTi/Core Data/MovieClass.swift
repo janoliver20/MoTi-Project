@@ -8,6 +8,7 @@
 
 import CoreData
 import UIKit
+import FileProvider
 
 class MovieClass {
     static let allMovies = MovieClass()
@@ -53,13 +54,16 @@ class MovieClass {
         return true
     }
 
-    func saveNewMovie(title: String, description: String = "", date: Date = Date(), hasBeenWatched: Bool = false) -> Bool {
+    func saveNewMovie(title: String, description: String = "", date: Date = Date(), hasBeenWatched: Bool = false, coverImage: UIImage?, specialImage: UIImage?) -> Bool {
         let newMovie = Movie(context: context)
         newMovie.title = title
         newMovie.movieDescription = description
         newMovie.date = date
         newMovie.hasBeenWatched = hasBeenWatched
-
+        
+        let filestring = title + "_" + String(date.timeIntervalSince1970)
+        
+        
         do {
             try context.save()
         } catch let error as NSError {
@@ -69,7 +73,24 @@ class MovieClass {
 
         return true
     }
-
+    
+    private func prepareImageToSave(image: UIImage?, filename: String){
+        if let image = image {
+            if let data = image.pngData() {
+                
+            }
+            
+            
+//            let fileManager = FileManager.default
+//            let paths = (NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as NSString).strings(byAppendingPaths: [filename])
+//            let newImage = UIImage(named: filename)
+//            fileManager.createFile(atPath: paths[0], contents: image, attributes: nil)
+        }
+        
+        
+    }
+    
+    
     func getMovieCount() -> Int {
         return movies.count
     }
@@ -114,6 +135,7 @@ class MovieClass {
     
     func deleteMovie(movieObject: Movie){
         do{
+            
             context.delete(movieObject)
             try context.save()
         } catch let error as NSError {

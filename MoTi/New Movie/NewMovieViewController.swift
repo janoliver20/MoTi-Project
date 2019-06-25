@@ -19,7 +19,8 @@ struct PropertyKey {
     static let hasBeenWatched = "hasBeenWatched"
 }
 
-class NewMovieViewController: UIViewController, UITextFieldDelegate, SettingsSaving {
+class NewMovieViewController: UIViewController, UITextFieldDelegate, SettingsSaving, ImagePickerDelegate {
+   
     
     @IBOutlet var movieTitle: UITextField!
     @IBOutlet var movieImage: UIImageView!
@@ -37,14 +38,18 @@ class NewMovieViewController: UIViewController, UITextFieldDelegate, SettingsSav
     }
 
     var newPhoto: UIImage?
+    var movieCover: UIImage? {
+        didSet {
+            movieImage.image = self.movieCover
+        }
+    }
     var hasBeenWatched = false
     var myStringTitle = ""
 
-    let ownPhoto: UIImageView = {
-        let imageView = UIImageView()
-        return imageView
-    }()
-
+    var pickImage: PickImage?
+    
+    var photoNumber: Int?
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         tableView.estimatedRowHeight = 44
@@ -56,6 +61,7 @@ class NewMovieViewController: UIViewController, UITextFieldDelegate, SettingsSav
 
         movieTitle.delegate = self
         tableView.tableFooterView = UIView()
+        self.pickImage = PickImage(presentationController: self, delegate: self)
 
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
         movieImage.isUserInteractionEnabled = true
@@ -77,10 +83,8 @@ class NewMovieViewController: UIViewController, UITextFieldDelegate, SettingsSav
 
     @objc private func imageTapped(tapGestureRecognizer: UITapGestureRecognizer) {
         let tappedImage = tapGestureRecognizer.view as! UIImageView
-
-        if let newImage = getNewImage() {
-            movieImage.image = newImage
-        }
+        photoNumber = 1
+        self.pickImage?.present(from: tappedImage)
     }
 
     private func loadSamplePhoto() {
@@ -139,9 +143,23 @@ class NewMovieViewController: UIViewController, UITextFieldDelegate, SettingsSav
     }
     
     @IBAction func addCustomPhoto(_ sender: UIButton) {
+        photoNumber = 2
+        self.pickImage?.present(from: sender)
+        
     }
     
-
+    func didSelect(image: UIImage?) {
+        if let image = image {
+            if photoNumber == 1 {
+                movieImage.image = image
+            }
+            else if photoNumber == 2 {
+                specialPhoto.image = image
+                specialPhoto.isHidden = false
+            }
+        }
+    }
+    
     
 }
 
@@ -189,75 +207,3 @@ extension NewMovieViewController: UITableViewDataSource, UITableViewDelegate {
     }
 }
 
-extension NewMovieViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    func getNewImage() -> UIImage? {
-        var newImage: UIImage?
-        choosePhotoMode()
-        if let newPhoto = newPhoto {
-            newImage = newPhoto
-            self.newPhoto = nil
-        }
-
-        return newImage
-    }
-
-    func choosePhotoMode() {
-        let optionMenu = UIAlertController(title: nil, message: "Choose a title image!", preferredStyle: .actionSheet)
-
-        let choosePhoto = UIAlertAction(title: "Choose Photo", style: .default, handler: { (_: UIAlertAction!) -> Void in self.photoLibrary() })
-
-        let takePhoto = UIAlertAction(title: "Take Photo", style: .default, handler: { (_: UIAlertAction!) -> Void in self.camera() })
-
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
-
-        optionMenu.addAction(choosePhoto)
-        optionMenu.addAction(takePhoto)
-        optionMenu.addAction(cancelAction)
-
-        present(optionMenu, animated: true, completion: nil)
-    }
-
-    func camera() {
-        guard UIImagePickerController.isSourceTypeAvailable(.camera) else {
-            selectImageFrom(.photoLibrary)
-            return
-        }
-        selectImageFrom(.camera)
-    }
-
-    func photoLibrary() {
-        guard UIImagePickerController.isSourceTypeAvailable(.savedPhotosAlbum) else {
-            return
-        }
-        selectImageFrom(.photoLibrary)
-    }
-
-    func selectImageFrom(_ source: ImageSource) {
-        imagePicker = UIImagePickerController()
-        imagePicker.delegate = self
-        switch source {
-        case .camera:
-            imagePicker.sourceType = .camera
-        case .photoLibrary:
-            imagePicker.sourceType = .photoLibrary
-        }
-        present(imagePicker, animated: true, completion: nil)
-    }
-
-    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-        dismiss(animated: true, completion: nil)
-    }
-
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
-        if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
-            newPhoto = image
-        } else {
-            print("Something went wrong")
-        }
-        dismiss(animated: true, completion: nil)
-    }
-
-    func addImageView() {
-        view.addSubview(ownPhoto)
-    }
-}

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F204B6F22C10A5C003AE808 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F204B6E22C10A5C003AE808 /* ImagePicker.swift */; };
 		1F20627022887CB80049F1D4 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F20626F22887CB80049F1D4 /* UIViewExtension.swift */; };
 		1F25C48A2291E37F001EF2F9 /* SeenMovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F25C4892291E37F001EF2F9 /* SeenMovieViewController.swift */; };
 		1F25C48C2291E3AE001EF2F9 /* SeenMovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F25C48B2291E3AE001EF2F9 /* SeenMovieTableViewCell.swift */; };
@@ -48,6 +49,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1F204B6E22C10A5C003AE808 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		1F20626F22887CB80049F1D4 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		1F25C4892291E37F001EF2F9 /* SeenMovieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeenMovieViewController.swift; sourceTree = "<group>"; };
 		1F25C48B2291E3AE001EF2F9 /* SeenMovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeenMovieTableViewCell.swift; sourceTree = "<group>"; };
@@ -102,6 +104,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1F204B6B22C10A3D003AE808 /* ImagePicker */ = {
+			isa = PBXGroup;
+			children = (
+				1F204B6E22C10A5C003AE808 /* ImagePicker.swift */,
+			);
+			path = ImagePicker;
+			sourceTree = "<group>";
+		};
 		1F25C4862291E12A001EF2F9 /* SeenVC */ = {
 			isa = PBXGroup;
 			children = (
@@ -141,6 +151,15 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		1F3D236F22C128C10002D29F /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				1F2D7219227F2E290002E74C /* MovieClass.swift */,
+				1FB020F522778CFC009B4253 /* MoTi.xcdatamodeld */,
+			);
+			path = "Core Data";
+			sourceTree = "<group>";
+		};
 		1FB020E222778CFB009B4253 = {
 			isa = PBXGroup;
 			children = (
@@ -164,18 +183,18 @@
 		1FB020ED22778CFB009B4253 /* MoTi */ = {
 			isa = PBXGroup;
 			children = (
+				1F3D236F22C128C10002D29F /* Core Data */,
 				74D7908522C0F3EC00180C63 /* DetailsViewController */,
 				1F33B9DC22946E1B00179163 /* Extensions */,
 				1F25C4862291E12A001EF2F9 /* SeenVC */,
 				1F25C4932291E75F001EF2F9 /* UnseenVC */,
 				1F25C49A2291E929001EF2F9 /* New Movie */,
+				1F204B6B22C10A3D003AE808 /* ImagePicker */,
 				1FB020EE22778CFB009B4253 /* AppDelegate.swift */,
 				1FB020F222778CFC009B4253 /* Main.storyboard */,
-				1F2D7219227F2E290002E74C /* MovieClass.swift */,
 				1FB020F822778CFD009B4253 /* Assets.xcassets */,
 				1FB020FA22778CFD009B4253 /* LaunchScreen.storyboard */,
 				1FB020FD22778CFD009B4253 /* Info.plist */,
-				1FB020F522778CFC009B4253 /* MoTi.xcdatamodeld */,
 			);
 			path = MoTi;
 			sourceTree = "<group>";
@@ -342,6 +361,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F204B6F22C10A5C003AE808 /* ImagePicker.swift in Sources */,
 				1F25C49E2291E951001EF2F9 /* NewMovieViewController.swift in Sources */,
 				1F25C48A2291E37F001EF2F9 /* SeenMovieViewController.swift in Sources */,
 				1F25C4972291E78E001EF2F9 /* UnseenMovieViewController.swift in Sources */,

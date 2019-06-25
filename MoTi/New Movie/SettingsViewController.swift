@@ -20,8 +20,6 @@ class SettingsViewController: UIViewController, UITextViewDelegate, UINavigation
     var delegate: SettingsSaving?
     var descText: String?
     
-    @IBOutlet weak var viewLbl: UINavigationItem!
-    
     let movieDatePicker: UIDatePicker = {
         let datePicker = UIDatePicker()
         datePicker.datePickerMode = .date
@@ -61,7 +59,7 @@ class SettingsViewController: UIViewController, UITextViewDelegate, UINavigation
         navigationController?.delegate = self
         
         if let movieTitle = vcTitle {
-            viewLbl.title = movieTitle
+            navigationItem.title = movieTitle
         }
         descTextView.delegate = self
         
@@ -79,6 +77,7 @@ class SettingsViewController: UIViewController, UITextViewDelegate, UINavigation
     private func prepareLayout(){
         view.addSubview(headTextView)
         
+        
         headTextView.topAnchor.constraint(equalTo: view.topAnchor, constant: 100).isActive = true
         headTextView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 0).isActive = true
         headTextView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: 0).isActive = true
@@ -94,6 +93,7 @@ class SettingsViewController: UIViewController, UITextViewDelegate, UINavigation
                 descTextView.becomeFirstResponder()
                 prepareDescLayout()
             }
+            
         }
         else {
             return
@@ -137,8 +137,8 @@ class SettingsViewController: UIViewController, UITextViewDelegate, UINavigation
         descTextView.resignFirstResponder()
         return false
     }
-    @IBAction func finishEditing(_ sender: UIBarButtonItem) {
         
+    @IBAction func finishEditing(_ sender: UIButton) {
         if let vcTitle = vcTitle {
             if vcTitle.elementsEqual("Date") {
                 delegate?.saveDate(date: movieDatePicker.date)
@@ -150,7 +150,6 @@ class SettingsViewController: UIViewController, UITextViewDelegate, UINavigation
         dismiss(animated: true)
     }
     
-
 }
 
 
