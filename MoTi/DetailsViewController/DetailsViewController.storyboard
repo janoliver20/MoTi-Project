@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="UbE-zb-e93">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="CzS-HX-jUf">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,39 +10,101 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Movie Details View Controller-->
         <scene sceneID="uJS-bd-9Z9">
             <objects>
-                <viewController storyboardIdentifier="DetailsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="CzS-HX-jUf" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="CzS-HX-jUf" customClass="MovieDetailsViewController" customModule="MoTi" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LGD-gK-USB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vP8-an-kak">
+                                <rect key="frame" x="30" y="69" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="1g3-tC-rha"/>
+                                    <constraint firstAttribute="height" constant="150" id="uGG-lC-Jci"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movie Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="blt-pt-nIS">
+                                <rect key="frame" x="30" y="259" width="354" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="Fph-3F-PVw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Zf0-r1-BTM">
+                                <rect key="frame" x="57" y="554" width="300" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="ZDE-Q9-Wz8"/>
+                                    <constraint firstAttribute="width" constant="300" id="i6z-em-jli"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seen/Unseen" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="80k-Jy-r3M">
+                                <rect key="frame" x="220" y="74" width="137" height="74"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="74" id="ATZ-gH-yV9"/>
+                                    <constraint firstAttribute="width" constant="137" id="ePG-nb-Ztf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Movie Description Text View" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="zl9-cy-QWG">
+                                <rect key="frame" x="30" y="314" width="354" height="200"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="ufu-vK-Vi7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CQf-I0-HA8">
+                                <rect key="frame" x="220" y="158" width="137" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="137" id="dxb-3U-Z5p"/>
+                                    <constraint firstAttribute="height" constant="25" id="whJ-H5-eby"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="blt-pt-nIS" firstAttribute="leading" secondItem="ufV-Gt-ja9" secondAttribute="leading" constant="30" id="3QX-pf-lEv"/>
+                            <constraint firstItem="80k-Jy-r3M" firstAttribute="leading" secondItem="vP8-an-kak" secondAttribute="trailing" constant="40" id="3i4-aL-Ypg"/>
+                            <constraint firstItem="blt-pt-nIS" firstAttribute="top" secondItem="vP8-an-kak" secondAttribute="bottom" constant="40" id="8dZ-xP-K5e"/>
+                            <constraint firstItem="vP8-an-kak" firstAttribute="top" secondItem="ufV-Gt-ja9" secondAttribute="top" constant="25" id="Fcn-Cz-vj6"/>
+                            <constraint firstItem="ufV-Gt-ja9" firstAttribute="trailing" secondItem="blt-pt-nIS" secondAttribute="trailing" constant="30" id="GmO-wf-ElY"/>
+                            <constraint firstItem="Zf0-r1-BTM" firstAttribute="centerX" secondItem="LGD-gK-USB" secondAttribute="centerX" id="JA3-G9-kWK"/>
+                            <constraint firstItem="Zf0-r1-BTM" firstAttribute="top" secondItem="zl9-cy-QWG" secondAttribute="bottom" constant="40" id="X0F-2v-qUy"/>
+                            <constraint firstItem="CQf-I0-HA8" firstAttribute="leading" secondItem="vP8-an-kak" secondAttribute="trailing" constant="40" id="YoS-pm-Fjh"/>
+                            <constraint firstItem="zl9-cy-QWG" firstAttribute="leading" secondItem="ufV-Gt-ja9" secondAttribute="leading" constant="30" id="dBy-LX-ZEp"/>
+                            <constraint firstItem="zl9-cy-QWG" firstAttribute="centerX" secondItem="LGD-gK-USB" secondAttribute="centerX" id="dSz-FI-Yar"/>
+                            <constraint firstItem="80k-Jy-r3M" firstAttribute="top" secondItem="ufV-Gt-ja9" secondAttribute="top" constant="30" id="mot-K7-nTi"/>
+                            <constraint firstItem="blt-pt-nIS" firstAttribute="centerX" secondItem="LGD-gK-USB" secondAttribute="centerX" id="mza-O1-JUP"/>
+                            <constraint firstItem="zl9-cy-QWG" firstAttribute="top" secondItem="blt-pt-nIS" secondAttribute="bottom" constant="30" id="pJq-F9-jC3"/>
+                            <constraint firstItem="ufV-Gt-ja9" firstAttribute="trailing" secondItem="zl9-cy-QWG" secondAttribute="trailing" constant="30" id="q7r-N3-tOQ"/>
+                            <constraint firstItem="CQf-I0-HA8" firstAttribute="top" secondItem="80k-Jy-r3M" secondAttribute="bottom" constant="10" id="ri8-2D-UBq"/>
+                            <constraint firstItem="vP8-an-kak" firstAttribute="leading" secondItem="ufV-Gt-ja9" secondAttribute="leading" constant="30" id="yNe-hk-uvU"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="ufV-Gt-ja9"/>
                     </view>
                     <navigationItem key="navigationItem" id="FKx-S5-6Fg"/>
+                    <connections>
+                        <outlet property="dateLabel" destination="CQf-I0-HA8" id="8dl-g0-inf"/>
+                        <outlet property="descriptionOfMovieTextView" destination="zl9-cy-QWG" id="iiT-lF-8hD"/>
+                        <outlet property="movieTitleLabel" destination="blt-pt-nIS" id="M84-99-bpB"/>
+                        <outlet property="ownPhotoImageView" destination="Zf0-r1-BTM" id="ISa-hP-beS"/>
+                        <outlet property="pictureImageView" destination="vP8-an-kak" id="am8-iU-KAz"/>
+                        <outlet property="watchedLabel" destination="80k-Jy-r3M" id="UdC-Xv-uMp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ewV-hF-2Wd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1012" y="-547"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="lzx-er-3Uf">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="UbE-zb-e93" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="olj-j4-YZS">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="CzS-HX-jUf" kind="relationship" relationship="rootViewController" id="JYf-SJ-wMX"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="mne-kN-pfa" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="121.73913043478262" y="-547.09821428571422"/>
+            <point key="canvasLocation" x="1011.5942028985507" y="-547.09821428571422"/>
         </scene>
     </scenes>
 </document>

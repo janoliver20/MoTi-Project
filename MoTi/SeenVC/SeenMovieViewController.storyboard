@@ -56,7 +56,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="movieTV" destination="8UC-aA-WPJ" id="dJ0-ZL-fRu"/>
-                        <segue destination="tIB-ap-7Ha" kind="showDetail" identifier="detailsSegueSeen" id="D7l-Ei-hy7"/>
+                        <segue destination="tIB-ap-7Ha" kind="show" identifier="detailsSegueSeen" id="D7l-Ei-hy7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a2w-30-Soz" userLabel="First Responder" sceneMemberID="firstResponder"/>

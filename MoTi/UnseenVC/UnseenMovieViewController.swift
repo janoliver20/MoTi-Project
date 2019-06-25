@@ -80,9 +80,10 @@ extension UnseenMovieViewController: UITableViewDelegate, UITableViewDataSource 
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == segueName {
-            let vc = segue.destination as! UINavigationController
-            let realVC = vc.topViewController as! MovieDetailsViewController
-            realVC.myMovie = selectedMovie
+            
+            let vc = segue.destination as! MovieDetailsViewController
+            vc.myMovie = selectedMovie
+
         }
     }
 }
