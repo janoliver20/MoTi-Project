@@ -56,16 +56,20 @@ class MovieDetailsViewController : UIViewController{
                 watchedLabel.text = "I am going to watch this movie on"
             }
            
-            if let newCoverImage = myMovie.data1, let newOwnImage = myMovie.data2 {
+            if let newCoverImage = myMovie.data1  {
                 
                 pictureImageView.image = UIImage(data: newCoverImage)
-                
-                ownPhotoImageView.image = UIImage(data: newOwnImage)
             }
             else {
                 pictureImageView.image = UIImage(named: "sampleImage1")
-                scrollView.isScrollEnabled = false
 
+            }
+            
+            if let newOwnImage = myMovie.data2 {
+                ownPhotoImageView.image = UIImage(data: newOwnImage)
+            }
+            else {
+                scrollView.isScrollEnabled = false
                 
             }
             
