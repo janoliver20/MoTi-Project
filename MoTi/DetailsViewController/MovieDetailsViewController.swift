@@ -55,6 +55,14 @@ class MovieDetailsViewController : UIViewController{
                 watchedLabel.text = "I am going to watch this movie on"
             }
            
+            if let newCoverImage = myMovie.images?.data1, let newOwnImage = myMovie.images?.data2 {
+                
+                pictureImageView.image = UIImage(data: newCoverImage)
+                
+                ownPhotoImageView.image = UIImage(data: newOwnImage)
+            }
+            
+            
             
         }
         
