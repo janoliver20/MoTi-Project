@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--MoTi-->
+        <!--Seen Movies-->
         <scene sceneID="fqO-4p-Kcf">
             <objects>
                 <viewController storyboardIdentifier="SeenMovieViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="CMc-1a-ase" customClass="SeenMovieViewController" customModule="MoTi" customModuleProvider="target" sceneMemberID="viewController">
@@ -19,14 +19,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8UC-aA-WPJ">
-                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <rect key="frame" x="0.0" y="140" width="414" height="673"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="movieSeenCell" rowHeight="44" id="HLA-5K-d64" customClass="SeenMovieTableViewCell" customModule="MoTi" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="movieSeenCell" rowHeight="87" id="HLA-5K-d64" customClass="SeenMovieTableViewCell" customModule="MoTi" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="87"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="HLA-5K-d64" id="eRG-th-KSD">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="86.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -47,7 +47,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="MBN-5p-7rF"/>
                     </view>
-                    <navigationItem key="navigationItem" title="MoTi" id="dW1-PE-f99">
+                    <navigationItem key="navigationItem" title="Seen Movies" id="dW1-PE-f99">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="CK2-42-0yQ">
                             <connections>
                                 <segue destination="OdG-tq-wtt" kind="presentation" id="bGZ-Il-Cbf"/>
@@ -70,8 +70,8 @@
                     <tabBarItem key="tabBarItem" title="Seen" id="zaW-5i-M6p"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="GYW-na-l7V">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="GYW-na-l7V">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

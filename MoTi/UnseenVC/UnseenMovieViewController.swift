@@ -22,7 +22,7 @@ class UnseenMovieViewController: UIViewController  {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        refreshMovieLibrary()
+        reload()
     }
     
     override func viewDidLoad() {

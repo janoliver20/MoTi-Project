@@ -18,6 +18,12 @@ class SeenMovieTableViewCell: UITableViewCell {
             if let movieDate = movie?.date {
                 dateLbl.text = dateFormatter.string(from: movieDate)
             }
+            if let coverImage = movie?.images?.data1 {
+                movieCover.image = UIImage(data: coverImage)
+            }
+            else {
+                movieCover.image = UIImage(named: "sampleImage1")
+            }
         }
     }
     
@@ -38,18 +44,21 @@ class SeenMovieTableViewCell: UITableViewCell {
         return lbl
     }()
     
-    //    private let movieCover : UIImageView = {
-    //        let imgView = UIImageView(
-    //    }
+    private let movieCover : UIImageView = {
+        let imgView = UIImageView()
+        return imgView
+    }()
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        
+        addSubview(movieCover)
         addSubview(movieTitleLbl)
         addSubview(dateLbl)
         
-        movieTitleLbl.anchor(top: topAnchor, left: leftAnchor, bottom: nil, right: rightAnchor, paddingTop: 20, paddingLeft: 10, paddingBottom: 0, paddingRight: 10, width: 0, height: 0, enableInsets: false)
-        dateLbl.anchor(top: movieTitleLbl.bottomAnchor, left: leftAnchor, bottom: nil, right: rightAnchor, paddingTop: 0, paddingLeft: 10, paddingBottom: 0, paddingRight: 10, width: 0, height: 0, enableInsets: false)
+        movieCover.anchor(top: topAnchor, left: leftAnchor, bottom: nil, right: nil, paddingTop: 10, paddingLeft: 20, paddingBottom: 10, paddingRight: 0, width: 54, height: 80, enableInsets: false)
+        
+        movieTitleLbl.anchor(top: topAnchor, left: movieCover.rightAnchor, bottom: nil, right: rightAnchor, paddingTop: 20, paddingLeft: 10, paddingBottom: 0, paddingRight: 10, width: 0, height: 0, enableInsets: false)
+        dateLbl.anchor(top: movieTitleLbl.bottomAnchor, left: movieCover.rightAnchor, bottom: nil, right: rightAnchor, paddingTop: 0, paddingLeft: 10, paddingBottom: 0, paddingRight: 10, width: 0, height: 0, enableInsets: false)
         
     }
     

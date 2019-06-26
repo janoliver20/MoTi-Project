@@ -38,11 +38,9 @@ class NewMovieViewController: UIViewController, UITextFieldDelegate, SettingsSav
     }
 
     var newPhoto: UIImage?
-    var movieCover: UIImage? {
-        didSet {
-            movieImage.image = self.movieCover
-        }
-    }
+    var movieCover: UIImage?
+    var specialImage: UIImage?
+    
     var hasBeenWatched = false
     var myStringTitle = ""
 
@@ -126,7 +124,7 @@ class NewMovieViewController: UIViewController, UITextFieldDelegate, SettingsSav
             break
         }
 
-        if !MovieClass.allMovies.saveNewMovie(title: movieTitle, description: descriptionText ?? "", date: dateToWatch ?? Date(), hasBeenWatched: hasBeenWatched) {
+        if !MovieClass.allMovies.saveNewMovie(title: movieTitle, description: descriptionText ?? "", date: dateToWatch ?? Date(), hasBeenWatched: hasBeenWatched, coverImage: movieCover, specialImage: specialImage) {
             let alert = UIAlertController(title: "Movie was not saved!", message: "Please try again!", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
             present(alert, animated: true)
@@ -152,10 +150,12 @@ class NewMovieViewController: UIViewController, UITextFieldDelegate, SettingsSav
         if let image = image {
             if photoNumber == 1 {
                 movieImage.image = image
+                movieCover = image
             }
             else if photoNumber == 2 {
                 specialPhoto.image = image
                 specialPhoto.isHidden = false
+                specialImage = image
             }
         }
     }

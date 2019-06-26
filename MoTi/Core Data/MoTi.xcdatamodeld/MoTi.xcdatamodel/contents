@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14490.99" systemVersion="18F132" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Images" representedClassName="Images" syncable="YES" codeGenerationType="class">
+        <attribute name="data1" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="data2" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="imageName1" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="imageName2" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="movie" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Movie" inverseName="images" inverseEntity="Movie" syncable="YES"/>
+    </entity>
     <entity name="Movie" representedClassName="Movie" syncable="YES" codeGenerationType="class">
         <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="hasBeenWatched" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
@@ -7,8 +14,10 @@
         <attribute name="imagePath2" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="movieDescription" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="images" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Images" inverseName="movie" inverseEntity="Images" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Movie" positionX="-63" positionY="-18" width="128" height="135"/>
+        <element name="Images" positionX="10.26171875" positionY="-11.39453125" width="160.3515625" height="118"/>
+        <element name="Movie" positionX="-351.9765625" positionY="-89.6484375" width="128" height="148"/>
     </elements>
 </model>

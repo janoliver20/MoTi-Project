@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--MoTi-->
+        <!--Unseen Movies-->
         <scene sceneID="ccx-H2-Ymh">
             <objects>
                 <viewController storyboardIdentifier="UnseenMovieViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="CVD-Rd-TN6" customClass="UnseenMovieViewController" customModule="MoTi" customModuleProvider="target" sceneMemberID="viewController">
@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1nb-VI-YX9">
-                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <rect key="frame" x="0.0" y="140" width="414" height="673"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="movieUnseenCell" id="XzQ-4L-44d" customClass="UnseenMovieTableViewCell" customModule="MoTi" customModuleProvider="target">
@@ -47,7 +47,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="L0g-D2-cof"/>
                     </view>
-                    <navigationItem key="navigationItem" title="MoTi" id="BbM-s8-HIC">
+                    <navigationItem key="navigationItem" title="Unseen Movies" id="BbM-s8-HIC">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="QNP-bz-oJv">
                             <connections>
                                 <segue destination="xdQ-e0-SIV" kind="presentation" id="hTx-nJ-eJL"/>
@@ -78,8 +78,8 @@
                     <tabBarItem key="tabBarItem" title="Unseen" id="3DQ-cl-dxt"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Pfe-B8-ZwX">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="Pfe-B8-ZwX">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

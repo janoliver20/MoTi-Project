@@ -61,8 +61,17 @@ class MovieClass {
         newMovie.date = date
         newMovie.hasBeenWatched = hasBeenWatched
         
-        let filestring = title + "_" + String(date.timeIntervalSince1970)
+        let filestring1 = "\(title)_\(String(date.timeIntervalSince1970))"
+        let filestring2 = "\(title)2_\(String(date.timeIntervalSince1970))"
+        let persistentImage = Images(context: context)
+        if let image = coverImage, let image2 = specialImage {
+            persistentImage.data1 = image.pngData()
+            persistentImage.imageName1 = filestring1
+            persistentImage.data2 = image2.pngData()
+            persistentImage.imageName2 = filestring2
+        }
         
+        newMovie.images = persistentImage
         
         do {
             try context.save()
@@ -72,22 +81,6 @@ class MovieClass {
         }
 
         return true
-    }
-    
-    private func prepareImageToSave(image: UIImage?, filename: String){
-        if let image = image {
-            if let data = image.pngData() {
-                
-            }
-            
-            
-//            let fileManager = FileManager.default
-//            let paths = (NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as NSString).strings(byAppendingPaths: [filename])
-//            let newImage = UIImage(named: filename)
-//            fileManager.createFile(atPath: paths[0], contents: image, attributes: nil)
-        }
-        
-        
     }
     
     
@@ -135,7 +128,7 @@ class MovieClass {
     
     func deleteMovie(movieObject: Movie){
         do{
-            
+            movies.removeAll(where: {$0 === movieObject})
             context.delete(movieObject)
             try context.save()
         } catch let error as NSError {
