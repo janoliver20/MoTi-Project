@@ -60,18 +60,13 @@ class MovieClass {
         newMovie.movieDescription = description
         newMovie.date = date
         newMovie.hasBeenWatched = hasBeenWatched
-        
-        let filestring1 = "\(title)_\(String(date.timeIntervalSince1970))"
-        let filestring2 = "\(title)2_\(String(date.timeIntervalSince1970))"
-        let persistentImage = Images(context: context)
-        if let image = coverImage, let image2 = specialImage {
-            persistentImage.data1 = image.pngData()
-            persistentImage.imageName1 = filestring1
-            persistentImage.data2 = image2.pngData()
-            persistentImage.imageName2 = filestring2
+
+        if let image = coverImage {
+            newMovie.data1 = image.pngData()
         }
-        
-        newMovie.images = persistentImage
+        if let image = specialImage {
+            newMovie.data2 = image.pngData()
+        }
         
         do {
             try context.save()

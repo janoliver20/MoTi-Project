@@ -18,7 +18,7 @@ class SeenMovieTableViewCell: UITableViewCell {
             if let movieDate = movie?.date {
                 dateLbl.text = dateFormatter.string(from: movieDate)
             }
-            if let coverImage = movie?.images?.data1 {
+            if let coverImage = movie?.data1 {
                 movieCover.image = UIImage(data: coverImage)
             }
             else {
@@ -46,6 +46,7 @@ class SeenMovieTableViewCell: UITableViewCell {
     
     private let movieCover : UIImageView = {
         let imgView = UIImageView()
+        
         return imgView
     }()
     

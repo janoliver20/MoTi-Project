@@ -19,6 +19,7 @@ class MovieDetailsViewController : UIViewController{
     
     //let allmovies = MovieClass.allMovies
     
+    @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var movieTitleLabel: UILabel!
     @IBOutlet weak var pictureImageView: UIImageView!
@@ -55,11 +56,17 @@ class MovieDetailsViewController : UIViewController{
                 watchedLabel.text = "I am going to watch this movie on"
             }
            
-            if let newCoverImage = myMovie.images?.data1, let newOwnImage = myMovie.images?.data2 {
+            if let newCoverImage = myMovie.data1, let newOwnImage = myMovie.data2 {
                 
                 pictureImageView.image = UIImage(data: newCoverImage)
                 
                 ownPhotoImageView.image = UIImage(data: newOwnImage)
+            }
+            else {
+                pictureImageView.image = UIImage(named: "sampleImage1")
+                scrollView.isScrollEnabled = false
+
+                
             }
             
             
