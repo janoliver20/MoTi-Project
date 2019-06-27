@@ -33,6 +33,7 @@ class UnseenMovieTableViewCell: UITableViewCell {
         lbl.textColor = .black
         lbl.font = UIFont.boldSystemFont(ofSize: 18)
         lbl.textAlignment = .left
+        lbl.numberOfLines = 2
         return lbl
     }()
     

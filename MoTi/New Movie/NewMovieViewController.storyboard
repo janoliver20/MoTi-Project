@@ -37,6 +37,9 @@
                                     <constraint firstAttribute="height" constant="64" id="wKK-hu-1UX"/>
                                 </constraints>
                                 <state key="normal" title="Search for Movie"/>
+                                <connections>
+                                    <segue destination="qxm-YF-vpe" kind="show" id="fm8-um-KyS"/>
+                                </connections>
                             </button>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="uVu-8n-l7h">
                                 <rect key="frame" x="148" y="251" width="246" height="29"/>
@@ -147,6 +150,14 @@
             </objects>
             <point key="canvasLocation" x="1271.0144927536232" y="87.723214285714278"/>
         </scene>
+        <!--IMDbTableViewController-->
+        <scene sceneID="M6e-FZ-ry2">
+            <objects>
+                <viewControllerPlaceholder storyboardName="IMDbTableViewController" id="qxm-YF-vpe" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JJV-uN-sM8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1816" y="-75"/>
+        </scene>
         <!--Settings View Controller-->
         <scene sceneID="qhS-4b-Jb2">
             <objects>
@@ -174,7 +185,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uBy-rM-yp3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2318.840579710145" y="87.723214285714278"/>
+            <point key="canvasLocation" x="2464" y="88"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="4WE-Um-x3g">
