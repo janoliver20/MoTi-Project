@@ -228,12 +228,184 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MoTi/New Movie/NewMovieViewController.swift"
-            timestampString = "583192594.830725"
+            timestampString = "583238150.6191421"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "124"
             endingLineNumber = "124"
             landmarkName = "saveNewMovie(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MoTi/SeenVC/SeenMovieTableViewCell.swift"
+            timestampString = "583311899.1885051"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "movie"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MoTi/DetailsViewController/MovieDetailsViewController.swift"
+            timestampString = "583239398.3452719"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
+            landmarkName = "showDetailsOfMovieEntry()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MoTi/SeenVC/SeenMovieViewController.swift"
+            timestampString = "583281391.376056"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "SeenMovieViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MoTi.SeenMovieViewController.seenMovieArr.getter : Swift.Array&lt;MoTi.Movie&gt;"
+                  moduleName = "MoTi"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jancortiel/Documents/FH/Semester%202/Projekt/MoTi%20SourceTree/MoTi/SeenVC/SeenMovieViewController.swift"
+                  timestampString = "583237990.781849"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "140">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MoTi.SeenMovieViewController.seenMovieArr.setter : Swift.Array&lt;MoTi.Movie&gt;"
+                  moduleName = "MoTi"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jancortiel/Documents/FH/Semester%202/Projekt/MoTi%20SourceTree/MoTi/SeenVC/SeenMovieViewController.swift"
+                  timestampString = "583237990.783475"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "192">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MoTi.SeenMovieViewController.seenMovieArr.modify : Swift.Array&lt;MoTi.Movie&gt;"
+                  moduleName = "MoTi"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jancortiel/Documents/FH/Semester%202/Projekt/MoTi%20SourceTree/MoTi/SeenVC/SeenMovieViewController.swift"
+                  timestampString = "583237990.784825"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "20">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MoTi.SeenMovieViewController.seenMovieArr.modify : Swift.Array&lt;MoTi.Movie&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "MoTi"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jancortiel/Documents/FH/Semester%202/Projekt/MoTi%20SourceTree/MoTi/SeenVC/SeenMovieViewController.swift"
+                  timestampString = "583237990.786144"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MoTi.SeenMovieViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; MoTi.SeenMovieViewController"
+                  moduleName = "MoTi"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jancortiel/Documents/FH/Semester%202/Projekt/MoTi%20SourceTree/MoTi/SeenVC/SeenMovieViewController.swift"
+                  timestampString = "583237990.787455"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "316">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MoTi.SeenMovieViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;MoTi.SeenMovieViewController&gt;"
+                  moduleName = "MoTi"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jancortiel/Documents/FH/Semester%202/Projekt/MoTi%20SourceTree/MoTi/SeenVC/SeenMovieViewController.swift"
+                  timestampString = "583237990.788813"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "264">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MoTi/Core Data/MovieClass.swift"
+            timestampString = "583311899.188661"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
+            landmarkName = "saveNewMovie(title:description:date:hasBeenWatched:coverImage:specialImage:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MoTi/New Movie/ImDb/IMDBTableViewController.swift"
+            timestampString = "583311899.188719"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "loadMoviesFromIMDB(with:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

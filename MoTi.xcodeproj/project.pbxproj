@@ -19,6 +19,9 @@
 		1F25C49E2291E951001EF2F9 /* NewMovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F25C49D2291E951001EF2F9 /* NewMovieViewController.swift */; };
 		1F2D7215227F03030002E74C /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2D7214227F03030002E74C /* SettingsViewController.swift */; };
 		1F2D721A227F2E290002E74C /* MovieClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2D7219227F2E290002E74C /* MovieClass.swift */; };
+		1F325CAB22C3CED800064A2B /* IMDbTableViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F325CAA22C3CED800064A2B /* IMDbTableViewController.storyboard */; };
+		1F325CAD22C3CEF400064A2B /* IMDBTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F325CAC22C3CEF400064A2B /* IMDBTableViewController.swift */; };
+		1F325CB122C3E13400064A2B /* DataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F325CB022C3E13400064A2B /* DataBase.swift */; };
 		1F33B9DE22946E3000179163 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F33B9DD22946E3000179163 /* UIColorExtension.swift */; };
 		1FB020EF22778CFB009B4253 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB020EE22778CFB009B4253 /* AppDelegate.swift */; };
 		1FB020F422778CFC009B4253 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FB020F222778CFC009B4253 /* Main.storyboard */; };
@@ -61,6 +64,9 @@
 		1F25C49D2291E951001EF2F9 /* NewMovieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMovieViewController.swift; sourceTree = "<group>"; };
 		1F2D7214227F03030002E74C /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		1F2D7219227F2E290002E74C /* MovieClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieClass.swift; sourceTree = "<group>"; };
+		1F325CAA22C3CED800064A2B /* IMDbTableViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = IMDbTableViewController.storyboard; sourceTree = "<group>"; };
+		1F325CAC22C3CEF400064A2B /* IMDBTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMDBTableViewController.swift; sourceTree = "<group>"; };
+		1F325CB022C3E13400064A2B /* DataBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBase.swift; sourceTree = "<group>"; };
 		1F33B9DD22946E3000179163 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		1FB020EB22778CFB009B4253 /* MoTi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoTi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FB020EE22778CFB009B4253 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -135,11 +141,22 @@
 		1F25C49A2291E929001EF2F9 /* New Movie */ = {
 			isa = PBXGroup;
 			children = (
+				1F325CA922C3CEB400064A2B /* ImDb */,
 				1F25C49B2291E93C001EF2F9 /* NewMovieViewController.storyboard */,
 				1F25C49D2291E951001EF2F9 /* NewMovieViewController.swift */,
 				1F2D7214227F03030002E74C /* SettingsViewController.swift */,
 			);
 			path = "New Movie";
+			sourceTree = "<group>";
+		};
+		1F325CA922C3CEB400064A2B /* ImDb */ = {
+			isa = PBXGroup;
+			children = (
+				1F325CAA22C3CED800064A2B /* IMDbTableViewController.storyboard */,
+				1F325CAC22C3CEF400064A2B /* IMDBTableViewController.swift */,
+				1F325CB022C3E13400064A2B /* DataBase.swift */,
+			);
+			path = ImDb;
 			sourceTree = "<group>";
 		};
 		1F33B9DC22946E1B00179163 /* Extensions */ = {
@@ -334,6 +351,7 @@
 				1FB020F922778CFD009B4253 /* Assets.xcassets in Resources */,
 				1FB020F422778CFC009B4253 /* Main.storyboard in Resources */,
 				1F25C49C2291E93C001EF2F9 /* NewMovieViewController.storyboard in Resources */,
+				1F325CAB22C3CED800064A2B /* IMDbTableViewController.storyboard in Resources */,
 				1F25C48E2291E41E001EF2F9 /* SeenMovieViewController.storyboard in Resources */,
 				1F25C4952291E777001EF2F9 /* UnseenMovieViewController.storyboard in Resources */,
 				74D7908722C0F43100180C63 /* DetailsViewController.storyboard in Resources */,
@@ -370,6 +388,8 @@
 				1F25C48C2291E3AE001EF2F9 /* SeenMovieTableViewCell.swift in Sources */,
 				1F20627022887CB80049F1D4 /* UIViewExtension.swift in Sources */,
 				1FB020EF22778CFB009B4253 /* AppDelegate.swift in Sources */,
+				1F325CAD22C3CEF400064A2B /* IMDBTableViewController.swift in Sources */,
+				1F325CB122C3E13400064A2B /* DataBase.swift in Sources */,
 				74D7908922C0F55C00180C63 /* MovieDetailsViewController.swift in Sources */,
 				1F33B9DE22946E3000179163 /* UIColorExtension.swift in Sources */,
 				1F25C4992291E7E1001EF2F9 /* UnseenMovieTableViewCell.swift in Sources */,
