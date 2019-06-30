@@ -25,6 +25,7 @@ class MovieDetailsViewController : UIViewController{
     @IBOutlet weak var pictureImageView: UIImageView!
     @IBOutlet weak var ownPhotoImageView: UIImageView!
     @IBOutlet weak var descriptionOfMovieTextView: UITextView!
+    @IBOutlet weak var linkField: UITextView!
     
     
     @IBOutlet weak var watchedLabel: UILabel!
@@ -49,6 +50,11 @@ class MovieDetailsViewController : UIViewController{
             movieTitleLabel.text = myMovie.title
             
             descriptionOfMovieTextView.text = myMovie.movieDescription != nil ? myMovie.movieDescription : "I liked this movie."
+            
+            if let link = myMovie.link {
+//                let newLinkForAustria = link.absoluteString.replacingOccurrences(of: "us", with: "at")
+                linkField.text = link.absoluteString
+            }
          
             if myMovie.hasBeenWatched{
                 watchedLabel.text = "I watched this movie on"

@@ -35,7 +35,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Zf0-r1-BTM">
-                                        <rect key="frame" x="30" y="379" width="354" height="300"/>
+                                        <rect key="frame" x="30" y="448" width="354" height="300"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="300" id="UcF-WP-udc"/>
                                         </constraints>
@@ -69,6 +69,16 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="No Link" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="G1v-Wx-Z6u">
+                                        <rect key="frame" x="30" y="362" width="354" height="70"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="70" id="UE8-3m-lP1"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                                    </textView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="blt-pt-nIS" firstAttribute="leading" secondItem="zl9-cy-QWG" secondAttribute="leading" id="2C8-bf-lKc"/>
@@ -78,16 +88,19 @@
                                     <constraint firstItem="CQf-I0-HA8" firstAttribute="top" secondItem="80k-Jy-r3M" secondAttribute="bottom" constant="10" id="Dhh-iY-ajb"/>
                                     <constraint firstItem="vP8-an-kak" firstAttribute="leading" secondItem="pnX-lh-hfh" secondAttribute="leading" constant="30" id="FLJ-gY-WNt"/>
                                     <constraint firstItem="CQf-I0-HA8" firstAttribute="leading" secondItem="vP8-an-kak" secondAttribute="trailing" constant="40" id="Flf-tP-eeX"/>
+                                    <constraint firstAttribute="trailing" secondItem="G1v-Wx-Z6u" secondAttribute="trailing" constant="30" id="KKy-kt-n14"/>
                                     <constraint firstAttribute="bottom" secondItem="Zf0-r1-BTM" secondAttribute="bottom" constant="173" id="KjD-Vq-NUB"/>
                                     <constraint firstItem="zl9-cy-QWG" firstAttribute="top" secondItem="blt-pt-nIS" secondAttribute="bottom" constant="30" id="Omb-9n-opp"/>
                                     <constraint firstItem="zl9-cy-QWG" firstAttribute="trailing" secondItem="Zf0-r1-BTM" secondAttribute="trailing" id="Oog-fL-fmh"/>
+                                    <constraint firstItem="G1v-Wx-Z6u" firstAttribute="leading" secondItem="pnX-lh-hfh" secondAttribute="leading" constant="30" id="V6m-VQ-Lz8"/>
+                                    <constraint firstItem="Zf0-r1-BTM" firstAttribute="top" secondItem="G1v-Wx-Z6u" secondAttribute="bottom" constant="16" id="cuJ-AL-aZW"/>
                                     <constraint firstItem="blt-pt-nIS" firstAttribute="top" secondItem="vP8-an-kak" secondAttribute="bottom" constant="40" id="iPd-Lo-b33"/>
                                     <constraint firstItem="vP8-an-kak" firstAttribute="leading" secondItem="blt-pt-nIS" secondAttribute="leading" id="ism-h4-QJ8"/>
                                     <constraint firstAttribute="trailing" secondItem="blt-pt-nIS" secondAttribute="trailing" constant="30" id="lzm-vF-2z8"/>
                                     <constraint firstItem="vP8-an-kak" firstAttribute="top" secondItem="pnX-lh-hfh" secondAttribute="top" constant="10" id="oNh-kz-71b"/>
                                     <constraint firstItem="vP8-an-kak" firstAttribute="top" secondItem="80k-Jy-r3M" secondAttribute="top" id="pCz-Kq-K3u"/>
-                                    <constraint firstItem="Zf0-r1-BTM" firstAttribute="top" secondItem="zl9-cy-QWG" secondAttribute="bottom" constant="25" id="s48-eS-8HP"/>
                                     <constraint firstItem="80k-Jy-r3M" firstAttribute="leading" secondItem="vP8-an-kak" secondAttribute="trailing" constant="40" id="sxw-ly-zmb"/>
+                                    <constraint firstItem="G1v-Wx-Z6u" firstAttribute="top" secondItem="zl9-cy-QWG" secondAttribute="bottom" constant="8" id="vRu-Ou-Kw2"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
@@ -104,6 +117,7 @@
                     <connections>
                         <outlet property="dateLabel" destination="CQf-I0-HA8" id="8dl-g0-inf"/>
                         <outlet property="descriptionOfMovieTextView" destination="zl9-cy-QWG" id="iiT-lF-8hD"/>
+                        <outlet property="linkField" destination="G1v-Wx-Z6u" id="fh6-iz-Wr9"/>
                         <outlet property="movieTitleLabel" destination="blt-pt-nIS" id="M84-99-bpB"/>
                         <outlet property="ownPhotoImageView" destination="Zf0-r1-BTM" id="ISa-hP-beS"/>
                         <outlet property="pictureImageView" destination="vP8-an-kak" id="am8-iU-KAz"/>

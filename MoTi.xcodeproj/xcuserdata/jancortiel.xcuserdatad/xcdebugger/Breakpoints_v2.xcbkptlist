@@ -10,7 +10,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MoTi/AppDelegate.swift"
-            timestampString = "580050897.049237"
+            timestampString = "583597742.761539"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "13"
@@ -104,7 +104,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MoTi/New Movie/SettingsViewController.swift"
-            timestampString = "583083674.706841"
+            timestampString = "583600973.033035"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "19"
@@ -212,7 +212,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MoTi/New Movie/SettingsViewController.swift"
-            timestampString = "583083674.7072099"
+            timestampString = "583600973.0334409"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "59"
@@ -228,11 +228,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MoTi/New Movie/NewMovieViewController.swift"
-            timestampString = "583238150.6191421"
+            timestampString = "583600973.033739"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "124"
-            endingLineNumber = "124"
+            startingLineNumber = "129"
+            endingLineNumber = "129"
             landmarkName = "saveNewMovie(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -260,11 +260,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MoTi/DetailsViewController/MovieDetailsViewController.swift"
-            timestampString = "583239398.3452719"
+            timestampString = "583600973.033867"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "59"
-            endingLineNumber = "59"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
             landmarkName = "showDetailsOfMovieEntry()"
             landmarkType = "7">
          </BreakpointContent>
@@ -276,7 +276,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MoTi/SeenVC/SeenMovieViewController.swift"
-            timestampString = "583281391.376056"
+            timestampString = "583595198.394459"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "20"
@@ -384,12 +384,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MoTi/Core Data/MovieClass.swift"
-            timestampString = "583311899.188661"
+            timestampString = "583600973.034225"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "64"
-            endingLineNumber = "64"
-            landmarkName = "saveNewMovie(title:description:date:hasBeenWatched:coverImage:specialImage:)"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
+            landmarkName = "saveNewMovie(title:description:date:hasBeenWatched:coverImage:specialImage:webLink:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -406,6 +406,70 @@
             startingLineNumber = "39"
             endingLineNumber = "39"
             landmarkName = "loadMoviesFromIMDB(with:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MoTi/New Movie/Network/MovieAPIViewController.swift"
+            timestampString = "583600973.034315"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "94"
+            endingLineNumber = "94"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MoTi/New Movie/Network/MovieAPITableViewCell.swift"
+            timestampString = "583597338.454744"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "MovieAPITableViewCell"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MoTi/New Movie/Network/MovieAPITableViewCell.swift"
+            timestampString = "583597338.455245"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "init(coder:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MoTi/New Movie/NewMovieViewController.swift"
+            timestampString = "583600973.034457"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "111"
+            endingLineNumber = "111"
+            landmarkName = "sendMovie(movie:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

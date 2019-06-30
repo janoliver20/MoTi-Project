@@ -19,14 +19,14 @@ struct PropertyKey {
     static let hasBeenWatched = "hasBeenWatched"
 }
 
-class NewMovieViewController: UIViewController, UITextFieldDelegate, SettingsSaving, ImagePickerDelegate {
-   
+class NewMovieViewController: UIViewController, UITextFieldDelegate, SettingsSaving, ImagePickerDelegate, sendMovie {
     
     @IBOutlet var movieTitle: UITextField!
     @IBOutlet var movieImage: UIImageView!
     @IBOutlet var watchedSegmentControl: UISegmentedControl!
     @IBOutlet var tableView: UITableView!
     @IBOutlet weak var specialPhoto: UIImageView!
+    @IBOutlet weak var linkField: UITextField!
     
     var imagePicker: UIImagePickerController!
     var descriptionText: String?
@@ -47,6 +47,9 @@ class NewMovieViewController: UIViewController, UITextFieldDelegate, SettingsSav
     var pickImage: PickImage?
     
     var photoNumber: Int?
+    
+    let searchSegue = "searchSegue"
+    let settingsSegue = "settingsSegue"
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -104,6 +107,11 @@ class NewMovieViewController: UIViewController, UITextFieldDelegate, SettingsSav
         descriptionText = desc
         tableView.reloadData()
     }
+    
+    func sendMovie(movie: Result) {
+        movieTitle.text = movie.trackName
+        linkField.text = movie.trackViewURL
+    }
 
     @IBAction func saveNewMovie(_ sender: UIBarButtonItem) {
         guard let movieTitle = movieTitle.text else {
@@ -123,8 +131,14 @@ class NewMovieViewController: UIViewController, UITextFieldDelegate, SettingsSav
         default:
             break
         }
+        
+        var url: URL?
+        
+        if linkField.text != "" {
+            url = URL(string: linkField.text ?? "")
+        }
 
-        if !MovieClass.allMovies.saveNewMovie(title: movieTitle, description: descriptionText ?? "", date: dateToWatch ?? Date(), hasBeenWatched: hasBeenWatched, coverImage: movieCover, specialImage: specialImage) {
+        if !MovieClass.allMovies.saveNewMovie(title: movieTitle, description: descriptionText ?? "", date: dateToWatch ?? Date(), hasBeenWatched: hasBeenWatched, coverImage: movieCover, specialImage: specialImage, webLink: url) {
             let alert = UIAlertController(title: "Movie was not saved!", message: "Please try again!", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
             present(alert, animated: true)
@@ -194,15 +208,24 @@ extension NewMovieViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let selectedSetting = settingsArray[indexPath.row]
         myStringTitle = selectedSetting
-        performSegue(withIdentifier: "settingsSegue", sender: self)
+        performSegue(withIdentifier: settingsSegue, sender: self)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "settingsSegue" {
+        if segue.identifier == settingsSegue {
             let destinationVC = segue.destination as! SettingsViewController
             destinationVC.vcTitle = myStringTitle
             destinationVC.delegate = self
             destinationVC.descText = descriptionText == nil ? "" : descriptionText
+        }
+        else if segue.identifier == searchSegue {
+            let vc = segue.destination as! UINavigationController
+            let realVC = vc.topViewController as! MovieAPIViewController
+            if let movieText = movieTitle.text, !movieText.isEmpty {
+                realVC.delegate = self
+                realVC.searchTerm = movieText
+            }
+            
         }
     }
 }

@@ -32,22 +32,12 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UhO-vG-fKJ">
-                                <rect key="frame" x="148" y="166" width="246" height="64"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="64" id="wKK-hu-1UX"/>
-                                </constraints>
+                                <rect key="frame" x="148" y="196" width="246" height="30"/>
                                 <state key="normal" title="Search for Movie"/>
                                 <connections>
-                                    <segue destination="qxm-YF-vpe" kind="show" id="fm8-um-KyS"/>
+                                    <segue destination="qxm-YF-vpe" kind="presentation" identifier="searchSegue" id="fm8-um-KyS"/>
                                 </connections>
                             </button>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="uVu-8n-l7h">
-                                <rect key="frame" x="148" y="251" width="246" height="29"/>
-                                <segments>
-                                    <segment title="Unseen"/>
-                                    <segment title="Seen"/>
-                                </segments>
-                            </segmentedControl>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="KnN-94-236">
                                 <rect key="frame" x="0.0" y="313" width="414" height="161"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -99,17 +89,33 @@
                                     <constraint firstAttribute="height" constant="198" id="BaG-WH-nWE"/>
                                 </constraints>
                             </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Link to movie" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EP8-8S-PNy">
+                                <rect key="frame" x="148" y="158" width="246" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="uVu-8n-l7h">
+                                <rect key="frame" x="148" y="253" width="246" height="29"/>
+                                <segments>
+                                    <segment title="Unseen"/>
+                                    <segment title="Seen"/>
+                                </segments>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="dE5-3o-gCR" firstAttribute="trailing" secondItem="gcK-Rk-dL8" secondAttribute="trailing" constant="20" id="46e-Ws-ISL"/>
                             <constraint firstItem="KnN-94-236" firstAttribute="leading" secondItem="dE5-3o-gCR" secondAttribute="leading" id="56O-gh-HeD"/>
+                            <constraint firstItem="dE5-3o-gCR" firstAttribute="trailing" secondItem="EP8-8S-PNy" secondAttribute="trailing" constant="20" id="5NT-NW-ZbZ"/>
+                            <constraint firstItem="EP8-8S-PNy" firstAttribute="top" secondItem="gcK-Rk-dL8" secondAttribute="bottom" constant="8" id="5Y9-HZ-K9F"/>
                             <constraint firstItem="caX-x1-Z4Z" firstAttribute="leading" secondItem="dE5-3o-gCR" secondAttribute="leading" constant="20" id="9pB-cQ-SJr"/>
+                            <constraint firstItem="EP8-8S-PNy" firstAttribute="leading" secondItem="8nH-LO-k3U" secondAttribute="trailing" constant="16" id="Adb-aM-8YX"/>
                             <constraint firstItem="dE5-3o-gCR" firstAttribute="trailing" secondItem="UhO-vG-fKJ" secondAttribute="trailing" constant="20" id="FA0-qF-9y2"/>
-                            <constraint firstItem="UhO-vG-fKJ" firstAttribute="top" secondItem="gcK-Rk-dL8" secondAttribute="bottom" constant="16" id="FQs-CD-7qG"/>
                             <constraint firstItem="8nH-LO-k3U" firstAttribute="leading" secondItem="dE5-3o-gCR" secondAttribute="leading" constant="20" id="GJK-Vr-LhI"/>
                             <constraint firstItem="gcK-Rk-dL8" firstAttribute="top" secondItem="dE5-3o-gCR" secondAttribute="top" constant="32" id="JIv-Lm-ZZV"/>
                             <constraint firstItem="dE5-3o-gCR" firstAttribute="trailing" secondItem="uVu-8n-l7h" secondAttribute="trailing" constant="20" id="LS7-bE-bDz"/>
+                            <constraint firstItem="UhO-vG-fKJ" firstAttribute="top" secondItem="EP8-8S-PNy" secondAttribute="bottom" constant="8" id="NAD-6m-K85"/>
                             <constraint firstItem="caX-x1-Z4Z" firstAttribute="top" secondItem="hqN-aK-GlI" secondAttribute="bottom" constant="8" id="OVu-SF-PbS"/>
                             <constraint firstItem="hqN-aK-GlI" firstAttribute="centerX" secondItem="fbi-F5-pEG" secondAttribute="centerX" id="UwU-XY-CdI"/>
                             <constraint firstItem="8nH-LO-k3U" firstAttribute="top" secondItem="dE5-3o-gCR" secondAttribute="top" constant="32" id="YLk-YU-Yuq"/>
@@ -117,7 +123,7 @@
                             <constraint firstItem="hqN-aK-GlI" firstAttribute="top" secondItem="KnN-94-236" secondAttribute="bottom" constant="8" id="eNC-0Z-LOu"/>
                             <constraint firstItem="gcK-Rk-dL8" firstAttribute="leading" secondItem="8nH-LO-k3U" secondAttribute="trailing" constant="16" id="ead-MN-kZW"/>
                             <constraint firstItem="uVu-8n-l7h" firstAttribute="leading" secondItem="8nH-LO-k3U" secondAttribute="trailing" constant="16" id="oBW-if-htz"/>
-                            <constraint firstItem="uVu-8n-l7h" firstAttribute="top" secondItem="UhO-vG-fKJ" secondAttribute="bottom" constant="21" id="oov-rZ-hYN"/>
+                            <constraint firstItem="uVu-8n-l7h" firstAttribute="top" secondItem="UhO-vG-fKJ" secondAttribute="bottom" constant="27" id="oov-rZ-hYN"/>
                             <constraint firstItem="KnN-94-236" firstAttribute="top" secondItem="8nH-LO-k3U" secondAttribute="bottom" constant="32" id="q3e-YH-vdN"/>
                             <constraint firstItem="UhO-vG-fKJ" firstAttribute="leading" secondItem="8nH-LO-k3U" secondAttribute="trailing" constant="16" id="snm-fv-FOW"/>
                             <constraint firstItem="KnN-94-236" firstAttribute="trailing" secondItem="dE5-3o-gCR" secondAttribute="trailing" id="teH-l6-bec"/>
@@ -138,6 +144,7 @@
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
+                        <outlet property="linkField" destination="EP8-8S-PNy" id="b5S-x8-snk"/>
                         <outlet property="movieImage" destination="8nH-LO-k3U" id="18p-Ec-HTn"/>
                         <outlet property="movieTitle" destination="gcK-Rk-dL8" id="LJ6-NS-omG"/>
                         <outlet property="specialPhoto" destination="caX-x1-Z4Z" id="DTi-ut-HL6"/>
@@ -150,10 +157,10 @@
             </objects>
             <point key="canvasLocation" x="1271.0144927536232" y="87.723214285714278"/>
         </scene>
-        <!--IMDbTableViewController-->
+        <!--MovieAPIStoryBoard-->
         <scene sceneID="M6e-FZ-ry2">
             <objects>
-                <viewControllerPlaceholder storyboardName="IMDbTableViewController" id="qxm-YF-vpe" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="MovieAPIStoryBoard" id="qxm-YF-vpe" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JJV-uN-sM8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1816" y="-75"/>

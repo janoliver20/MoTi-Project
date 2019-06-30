@@ -54,12 +54,13 @@ class MovieClass {
         return true
     }
 
-    func saveNewMovie(title: String, description: String = "", date: Date = Date(), hasBeenWatched: Bool = false, coverImage: UIImage?, specialImage: UIImage?) -> Bool {
+    func saveNewMovie(title: String, description: String = "", date: Date = Date(), hasBeenWatched: Bool = false, coverImage: UIImage?, specialImage: UIImage?, webLink: URL?) -> Bool {
         let newMovie = Movie(context: context)
         newMovie.title = title
         newMovie.movieDescription = description
         newMovie.date = date
         newMovie.hasBeenWatched = hasBeenWatched
+        newMovie.link = webLink
 
         if let image = coverImage {
             newMovie.data1 = image.pngData()
