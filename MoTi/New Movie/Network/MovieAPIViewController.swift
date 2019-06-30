@@ -13,7 +13,7 @@ protocol sendMovie {
     func sendMovie(movie: Result)
 }
 
-class MovieAPIViewController: UIViewController, UINavigationControllerDelegate {
+class MovieAPIViewController: UIViewController, UINavigationControllerDelegate, UISearchBarDelegate, UISearchDisplayDelegate {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
@@ -34,6 +34,7 @@ class MovieAPIViewController: UIViewController, UINavigationControllerDelegate {
         if let searchTerm = searchTerm {
             loadMoviesFromiTunes(with: searchTerm)
         }
+        searchBar.delegate = self
         tableView.delegate = self
         tableView.dataSource = self
 //        tableView.register(MovieAPITableViewCell.self, forCellReuseIdentifier: cellID)
@@ -78,6 +79,17 @@ class MovieAPIViewController: UIViewController, UINavigationControllerDelegate {
     
     @IBAction func dismiss(_ sender: UIBarButtonItem) {
         dismiss(animated: true, completion: nil)
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if let searchText = searchBar.text {
+            loadMoviesFromiTunes(with: searchText)
+
+        }
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        self.searchBar.endEditing(true)
     }
     
 }
